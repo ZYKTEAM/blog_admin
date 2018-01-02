@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.myblog.mapper.PermissionMapper">
+
+	<sql id="PermissionSQL">
+		id, code, title, url, `type`, pid, leaf, path, sort,
+		is_deleted isDeleted
+	</sql>
+	
+	 <select id="findPermissionsByPId" resultType="Permission">
+		SELECT 
+			<include refid="PermissionSQL" />
+		FROM permission_t
+		WHERE 
+			is_deleted = 0
+			AND pid = #{pid} 
+	</select>
+	
+	<select id="findPermissionsPathAndLeaf" resultType="Permission">
+		SELECT 
+			<include refid="PermissionSQL" />
+		FROM permission_t
+		WHERE 
+			is_deleted = 0
+			<if test="leaf!=null">
+				AND leaf = #{leaf} 
+			</if>
+			<if test="path!=null and path!=''">
+				AND path LIKE #{path}
+			</if>
+	</select>	
+	
+</mapper>
