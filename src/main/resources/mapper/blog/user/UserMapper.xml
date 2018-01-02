@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.myblog.mapper.UserMapper">
+
+	<sql id="userSql">
+	 u.id, 
+	 u.open_id as openId, 
+	 u.gender, 
+	 u.username, 
+	 u.login_name as loginName, 
+	 u.phone, 
+	 u.email, 
+	 u.password, 
+	 u.create_time as createTime, 
+	 u.avakname, 
+	 u.avatar, 
+	 u.birthday, 
+	 u.meta, 
+	 u.md5, 
+	 u.login_type as loginType, 
+	 u.introduce, 
+	 u.addr, 
+	 u.qq, 
+	 u.roles
+	</sql>
+ 	
+    <select id="getByUsername" resultType="com.myblog.domain.User">
+    	select <include refid="userSql"/> from t_blog_user u where u.login_name = #{account}
+    </select>
+    
+    <select id="listUser" resultType="User">
+		select <include refid="userSql" /> from t_blog_user u where 1=1
+		<if test="query != null and query !=''">
+		  and (
+				u.login_name like concat("%", #{query}, "%")
+				or u.phone like concat("%", #{query}, "%")
+			 )
+		</if>
+		limit #{start}, #{limit}
+	</select>
+	
+	<select id="countListUser" resultType="java.lang.Integer">
+		select count(1) from t_blog_user u where 1=1
+		<if test="query != null and query !=''">
+		  and (
+				u.login_name like concat("%", #{query}, "%")
+				or u.phone like concat("%", #{query}, "%")
+			 )
+		</if>
+	</select>
+      
+</mapper>

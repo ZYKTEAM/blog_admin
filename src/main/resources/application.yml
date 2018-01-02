@@ -1,0 +1,72 @@
+multipart:
+    max-file-size: 5120Mb
+    max-request-size: 5120Mb
+
+server:
+    port: 8089
+    context-path: /admin
+
+spring:
+    thymeleaf:
+        cache: false
+        cache-period: 0
+    template:
+        cache: false
+    mvc:
+        favicon:
+            enabled: false
+
+
+mybatis:
+    mapperLocations: classpath:/mapper/blog/user/*.xml
+    typeAliasesPackage: com.myblog.domain
+
+database:
+    host: 47.94.14.214
+    port: 3306
+    name: blog_user
+
+---
+spring:
+    profiles: default
+    datasource:
+        initialize: false
+        url: jdbc:mysql://${database.host}:${database.port}/${database.name}?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+        username: root
+        password: zhouyongkang2
+        driver-class-name: com.mysql.jdbc.Driver
+        maxActive: 1000
+        initialSize: 10
+        maxWait: 60000
+        minIdle: 5
+        test-on-borrow: true 
+        test-on-return: true
+        validation-query: SELECT 1
+    http:
+        multipart:
+            max-file-size: 5120Mb
+            max-request-size: 5120Mb
+
+#monitor           
+management:
+    port: 8092
+    security:
+        enabled: false
+
+logging:
+    level:
+        root: INFO
+    file: logs/blog_admin.log
+
+
+#cas configurations
+cas-server: http://127.0.0.1:8080/cas
+cas-service: http://127.0.0.1:8089/admin/login/cas
+cas-login: http://127.0.0.1:8080/cas/login
+cas-logout: http://127.0.0.1:8080/cas/logout?service=http://127.0.0.1:8089/admin/user
+
+#layout
+layout: content
+full-layout: full-layout
+
+
