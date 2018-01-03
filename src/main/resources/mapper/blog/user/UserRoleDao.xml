@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.myblog.mapper.UserRoleMapper">
+
+	<sql id="userSql">
+		u.id,
+		u.login_name as account,
+		u.avatar,
+		u.type,
+		u.name,
+		u.status,
+		u.update_by as updateBy,
+		u.create_date as createDate,
+		u.update_date as updateDate,
+		u.is_deleted as isDeleted
+	</sql>
+	
+	<sql id="userRoleSql">
+		ur.id,
+		ur.user_id as userId,
+		ur.type,
+		ur.ref_id as refId,
+		ur.is_deleted as isDeleted
+	</sql>
+
+	<insert id="saveUserRoles" >  
+		insert into user_role_t(user_id, type, ref_id, is_deleted)
+			values
+			<foreach collection="userRoles" item="etp" index="index" separator=",">
+				(#{etp.userId}, #{etp.type}, #{etp.refId},0)
+			</foreach>
+	</insert>
+	
+	<update id="delRoleUserByUserId">
+		update user_role_t set is_deleted = 1 where ref_id = #{roleId} and user_id in
+		<foreach collection="delteaIds" item="userId" open="(" separator="," close=")">
+			#{userId}
+		</foreach>
+	</update>
+	
+	<select id="findRolePermissionByUserId" resultType="UserRole">
+		SELECT <include refid="userRoleSql"/> FROM user_role_t ur 
+			where ur.is_deleted = 0 
+			<if test="userId !=null">
+				and ur.user_id = #{userId}
+			</if>
+			<if test="roleId !=null">
+				and ur.ref_id = #{roleId}
+			</if>
+	</select>
+	
+</mapper>

@@ -4,7 +4,7 @@ var current=1;
 var limit = 10;
 
 //初始化加载权限模态框
-//initPermissionsTree();
+initPermissionsTree();
 
 var params={'start':0,'limit':limit,'query':null};
 userList();
@@ -114,9 +114,9 @@ $("#userList").on("click", ".to-deleted", function() {
    });
     
 /* 修改*/
-$("#userList").on("click", ".to-edit", function() {
+/*$("#userList").on("click", ".to-edit", function() {
 	 window.location.href="/admin/user-edit?userId="+$(this).attr("userId");
-});
+});*/
 
 /**
  *  权限 模态框

@@ -2,6 +2,7 @@ package com.myblog.controller;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /*import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;*/
@@ -9,11 +10,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.google.common.collect.Lists;
 import com.myblog.domain.Permission;
+import com.myblog.domain.RolePermission;
 import com.myblog.domain.TreeNode;
 import com.myblog.service.PermissionService;
+import com.myblog.service.RolePermissionService;
+import com.myblog.ulits.HttpResults;
 import com.myblog.ulits.UserUtil;
 
 @Controller
@@ -21,8 +27,9 @@ public class PermissionController {
 
 	@Autowired
 	private PermissionService permissionService;
-	/*@Autowired
-	private RolePermissionService rolePermissionService;*/
+	@Autowired
+	private RolePermissionService rolePermissionService;
+	
 	
 	@RequestMapping(value="/permissions/pid", method=RequestMethod.GET)
 	public @ResponseBody List<TreeNode> findPermissionsByPid(Long pid){
@@ -36,13 +43,11 @@ public class PermissionController {
 				trees.add(new TreeNode(perm.getId()+"", perm.getTitle(), perm.getLeaf()==0?false:true, null, 0, perm.getPid()));
 			}
 		}
-		
 		return trees;
     }
 	
-	/*@RequestMapping(value="/rolePermissions", method=RequestMethod.POST)
-	public @ResponseBody HttpResults saveRolePermissions(Integer type,Long refId
-			,@RequestParam(value = "permIds[]",required = false) Long[] permIds){
+	@RequestMapping(value="/rolePermissions", method=RequestMethod.POST)
+	public @ResponseBody HttpResults saveRolePermissions(Integer type,Long refId ,@RequestParam(value = "permIds[]",required = false) Long[] permIds){
 		HttpResults result = new HttpResults();
 		if(permIds!=null && permIds.length>0){
 			List<RolePermission> oldList = rolePermissionService.findRolePermissions(type, refId);
@@ -66,9 +71,9 @@ public class PermissionController {
 			}
 		}
 		return result;
-    }*/
+    }
 	
-	/*@RequestMapping(value="/rolePermissions/refid", method=RequestMethod.GET)
+	@RequestMapping(value="/rolePermissions/refid", method=RequestMethod.GET)
 	public @ResponseBody HttpResults findRolePermissionsByRefId(Integer type,Long refId){
 		HttpResults result = new HttpResults();
 		List<RolePermission> list = rolePermissionService.findRolePermissions(type, refId);
@@ -80,6 +85,6 @@ public class PermissionController {
 	@RequestMapping(value="/permissions", method=RequestMethod.GET)
 	public @ResponseBody List<Permission> findPermissions(){
 		return UserUtil.getPermissions();
-	}*/
+	}
 	
 }

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.myblog.mapper.RolePermissionMapper">
+
+	<sql id="RolePermissionSQL">
+		id, permission_id permissionId, `type`, ref_id refId,
+		is_deleted isDeleted
+	</sql>
+	
+	<insert id="saveRolePermissionBatch">
+		INSERT INTO role_permission_t
+		(permission_id, `type`, ref_id,is_deleted)
+		VALUES
+		<foreach collection="list" item="item" separator=",">
+			(#{item.permissionId}, #{item.type}, #{item.refId},0)
+		</foreach>
+		
+	</insert>
+	
+	<select id="findRolePermissions" resultType="RolePermission">
+		SELECT 
+			<include refid="RolePermissionSQL" />
+		FROM role_permission_t
+		WHERE 
+			is_deleted = 0
+			<if test="type!=null"> AND type = #{type} </if>
+			<if test="refIds!=null"> 
+				AND ref_id IN
+				<foreach collection="refIds" item="item" open="(" separator="," close=")">
+					#{item}
+				</foreach> 
+			</if>
+	</select>
+	
+	<update id="removeRolePermissionsByRefId">
+		UPDATE role_permission_t SET
+			is_deleted=1
+		WHERE  
+			permission_id IN
+			<foreach collection="permIds" item="item" open="(" separator="," close=")">
+				#{item}
+			</foreach> 
+			AND `type`=#{type}
+			AND ref_id=#{refId}
+	</update>
+	
+</mapper>

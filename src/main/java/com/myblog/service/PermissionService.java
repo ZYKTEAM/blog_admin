@@ -1,57 +1,61 @@
 package com.myblog.service;
 
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.google.common.base.Strings;
+import com.google.common.collect.Lists;
 import com.myblog.domain.Permission;
+import com.myblog.domain.RolePermission;
+import com.myblog.domain.User;
+import com.myblog.domain.UserRole;
 import com.myblog.mapper.PermissionMapper;
+import com.myblog.mapper.RolePermissionMapper;
+import com.myblog.mapper.UserMapper;
+import com.myblog.mapper.UserRoleMapper;
 
 @Service
 public class PermissionService {
 
-//	@Autowired
-//	private RolePermissionDao rolePermissionDao;
+	@Autowired
+	private RolePermissionMapper rolePermissionMapper;
 	@Autowired
 	private PermissionMapper permissionMapper;
-	/*@Autowired
-	private UserRoleDao userRoleDao;
 	@Autowired
-	private UserDao userDao;*/
+	private UserRoleMapper userRoleMapper;
+	@Autowired
+	private UserMapper userMapper;
 	
-	@RequestMapping(value="/permissions/pid", method=RequestMethod.GET)
 	public List<Permission> findPermissionsByPId(Long pid){
 		return permissionMapper.findPermissionsByPId(pid);
 	}
 	
-	/*@RequestMapping(value="/permissions/user", method=RequestMethod.GET)
-	public List<Permission> findMyPerMissions(String path,@RequestParam("userId") Long userId){
-		User user = userDao.getUserByUserId(userId);
+	public List<Permission> findPermissions(String path,@RequestParam("userId") Long userId){
+		User user = userMapper.getUserByUserId(userId);
 		path = Strings.isNullOrEmpty(path)?null:path+"%";
-		List<Permission> perms = permissionDao.findPermissionsPathAndLeaf(path,null);
-		if("admin".equals(user.getAccount())) return perms;
+		List<Permission> perms = permissionMapper.findPermissionsPathAndLeaf(path,null);
+		if("admin".equals(user.getLoginName())) return perms;
 	
-		List<UserRole> userRoles = userRoleDao.findRolePermissionByUserId(user.getId(),null);
+		List<UserRole> userRoles = userRoleMapper.findRolePermissionByUserId(user.getId(),null);
 		List<Long> roleIds = Lists.newArrayList();
-//		List<Long> orgIds = Lists.newArrayList();
 		for (UserRole userRole : userRoles) {
 			if(userRole.getType().equals(1)){
 				roleIds.add(userRole.getRefId());
-			} else if(userRole.getType().equals(1)){
-				orgIds.add(userRole.getRefId());
 			} 
 		}
 		
 		//个人权限校验
 		Long[] userIds = {userId};
-		List<RolePermission> myRolePerms =rolePermissionDao.findRolePermissions(2, userIds);
+		List<RolePermission> myRolePerms =rolePermissionMapper.findRolePermissions(2, userIds);
 		
 		//角色权限校验
 		if(roleIds.size()>0){
-			List<RolePermission> rolePerms = rolePermissionDao.findRolePermissions(1, roleIds.toArray(new Long[]{}));
+			List<RolePermission> rolePerms = rolePermissionMapper.findRolePermissions(1, roleIds.toArray(new Long[]{}));
 			myRolePerms.addAll(rolePerms);
 		}
 		
@@ -59,6 +63,6 @@ public class PermissionService {
 		perms = perms.stream().filter(item->panelRolePermIdSet.contains(item.getId())).collect(Collectors.toList());
 	
 		return perms;
-	}*/
+	}
 
 }

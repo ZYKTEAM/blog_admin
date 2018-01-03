@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.myblog.mapper.RoleMapper">
+
+	<sql id="roleSQL">
+		id,
+		name,
+		type,
+		remark,
+		is_deleted isDeleted
+	</sql>
+	
+	<select id="getRoleById" resultType="Role">
+		SELECT 
+			<include refid="roleSQL" />
+		FROM role_t
+		WHERE 
+			is_deleted = 0
+			AND id = #{id} 
+	</select>
+	
+	<select id="countRoles" resultType="Integer">
+		SELECT 
+			COUNT(1)
+		FROM role_t
+		WHERE 
+			is_deleted = 0
+			<if test="query != null and query !=''">
+			  and (
+					name like concat("%", #{query}, "%")
+				 )
+			</if>
+	</select>
+	
+	<select id="findRoles" resultType="Role">
+		SELECT 
+			<include refid="roleSQL" />
+		FROM role_t
+		WHERE 
+			is_deleted = 0
+			<if test="query != null and query !=''">
+			  and (
+					name like concat("%", #{query}, "%")
+				 )
+			</if>
+			<if test="start != null and limit != null"> LIMIT #{start},#{limit} </if>
+	</select>
+	
+	<insert id="saveRole" keyProperty="id" useGeneratedKeys="true">
+		INSERT INTO role_t
+			(name,type, remark)
+		VALUES (#{name},#{type}, #{remark});
+	</insert>
+	
+	<insert id="updateRole">
+		UPDATE role_t
+			SET
+				name=#{name},
+				remark=#{remark}
+			WHERE id = #{id}
+	</insert>
+	
+	<insert id="updateRoleSelected">
+		UPDATE role_t
+			<set>
+				<if test="name != null">name=#{name},</if>
+				<if test="type != null">type=#{type},</if>
+				<if test="remark != null">remark=#{remark},</if>
+				<if test="isDeleted != null">is_deleted=#{isDeleted},</if>
+			</set>
+			WHERE id = #{id}
+	</insert>
+	
+</mapper>

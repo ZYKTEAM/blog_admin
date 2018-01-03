@@ -12,6 +12,8 @@ public interface UserMapper {
 	
 	public User getByUsername(@Param("account")String account);
 	
+	public User getUserByUserId(@Param("userId")Long userId);
+	
 	public List<User> listUser(@Param("start") Integer start,@Param("limit") Integer limit,@Param("query")String query);
 	
 	public Integer countListUser(@Param("query")String query);

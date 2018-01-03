@@ -35,7 +35,7 @@ $(function () {
     	$("#roleList").empty();
     	$.ajax({
     		type:"get",
-    		url:"/aspc/roles",
+    		url:"/admin/roles",
     		data:params,
     		success : function(data){
     			$("#roleTempl").tmpl(data).appendTo("#roleList");
@@ -161,7 +161,7 @@ $(function () {
 //    	console.log(delteaIds)
 		$.ajax({
 			type: "POST",
-			url: "/aspc/roleUser",
+			url: "/admin/roleUser",
 			data: {
 				userIds: tempArray2,
 				delteaIds:delteaIds,
@@ -182,7 +182,7 @@ function saveing(callback){
 	var saveParams = saveParamsing();
 	$.ajax({
 		type:"POST",
-		url: "/aspc/roles",
+		url: "/admin/roles",
 		dataType: "json",
 		data:saveParams,
 		success: function(data){
@@ -220,7 +220,7 @@ function geting(id_,callback){
 	}
 	$.ajax({
 		type:"GET",
-		url: "/aspc/roles"+'/'+id_,
+		url: "/admin/roles"+'/'+id_,
 		dataType: "json",
 		success: function(data){
 			if(typeof callback == 'function') callback(data);
@@ -234,7 +234,7 @@ function geting(id_,callback){
 function roleUserList(roleId){
 	$.ajax({
 		type: "GET",
-		url: "/aspc/findRoleUserByRoleId",
+		url: "/admin/findRoleUserByRoleId",
 		data: {
 			roleId: roleId
 		},
@@ -265,7 +265,7 @@ function userList(){
 	userParamsing();
 	$.ajax({
 		type: "GET",
-		url: "/aspc/listUser",
+		url: "/admin/listUser",
 		data:paramsu,
 		success: function(data){
 			

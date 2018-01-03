@@ -1,13 +1,13 @@
 $(function () {
 	
-	var account = $("#account").val();
+	var loginName = $("#loginName").val();
 	initLeft();
 	
 	function initLeft(){
-		if(account != "admin"){
+		if(loginName != "admin"){
 			$.ajax({
 	       		type: "get",
-	       		url: "/aspc/permissions",
+	       		url: "/admin/permissions",
 	       		dataType: "json",
 	       		async: false,
 	       		success: function(data){

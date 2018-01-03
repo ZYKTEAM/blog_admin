@@ -1,7 +1,13 @@
 package com.myblog.ulits;
 
+import java.util.Collection;
+import java.util.List;
+
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 
+import com.google.common.collect.Lists;
+import com.myblog.domain.Permission;
 import com.myblog.domain.User;
 import com.myblog.security.SecurityUser;
 
@@ -12,7 +18,7 @@ public class UserUtil {
 		return user.getUser();
 	}
 	
-	/*public static List<Permission> getPermissions(){
+	public static List<Permission> getPermissions(){
 		 Collection<GrantedAuthority> authorities = ((SecurityUser) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getAuthorities();
 		 List<Permission> permissions = Lists.newArrayList();
 		 if(authorities !=null && authorities.size()>0){
@@ -21,5 +27,5 @@ public class UserUtil {
 			 }
 		 }
 		 return permissions;
-	}*/
+	}
 }
