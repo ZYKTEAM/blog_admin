@@ -139,13 +139,6 @@ function falert(s,f) {
     });
 }
 
-//判断是否是admin,是否隐藏学校下拉
-var account=$("#account").val();
-account = account || "";
-if(account!="admin"){
-    $(".j_school").parent().hide();
-}
-
 //内容过长时进行截取
 function ContentSub(mess,val){
     var s = mess;
