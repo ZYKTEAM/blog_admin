@@ -38,6 +38,23 @@
                     <span>回帖管理</span>
                 </a>
             </li>
+            <li class="">
+                <a th:href="@{/user}">
+                    <i class="fa fa-cog"></i>
+                    <span>系統监控</span>
+                </a>
+                 <ul class="treeview-menu">
+                    <li>
+                        <a th:href="@{/druid/index.html}" target="_blank"><i class="fa fa-circle-o"></i>SQL监控</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-circle-o"></i>在线人数</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-circle-o"></i>日志访问</a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </section>
 </aside>

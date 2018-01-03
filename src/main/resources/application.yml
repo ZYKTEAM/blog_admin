@@ -18,7 +18,7 @@ spring:
 
 
 mybatis:
-    mapperLocations: classpath:/mapper/blog/user/*.xml
+    mapperLocations: classpath:/mapper/blog/*/*.xml
     typeAliasesPackage: com.myblog.domain
 
 database:
@@ -30,18 +30,26 @@ database:
 spring:
     profiles: default
     datasource:
-        initialize: false
         url: jdbc:mysql://${database.host}:${database.port}/${database.name}?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
         username: root
         password: zhouyongkang2
         driver-class-name: com.mysql.jdbc.Driver
-        maxActive: 1000
-        initialSize: 10
-        maxWait: 60000
+        platform: mysql
+        type: com.alibaba.druid.pool.DruidDataSource
+        initialSize: 1
         minIdle: 5
+        maxActive: 50
+        maxWait: 30000
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 30000
+        validationQuery: SELECT 1 FROM DUAL
+        testWhileIdle: true
         test-on-borrow: true 
-        test-on-return: true
-        validation-query: SELECT 1
+        test-on-return: false
+        poolPreparedStatements: true
+        maxPoolPreparedStatementPerConnectionSize: 20
+        filters: stat
+        connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
     http:
         multipart:
             max-file-size: 5120Mb
