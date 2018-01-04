@@ -8,24 +8,22 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.myblog.domain.User;
-import com.myblog.log.annotation.Log;
 import com.myblog.service.UserService;
 import com.myblog.ulits.PageList;
 import com.myblog.ulits.PageParam;
 
 @Controller
-public class UserController {
+public class ArticleController {
 	
 	@Autowired
 	public UserService userService;
  
-	@RequestMapping(value="/user", method=RequestMethod.GET)
+	@RequestMapping(value="/article", method=RequestMethod.GET)
     public String index(Model model) {
-        return "user/user-list";
+        return "article/article-list";
     }
 	
-    @RequestMapping(value="/listUser", method=RequestMethod.GET)
-    @Log("查询用户信息")
+  /*  @RequestMapping(value="/listUser", method=RequestMethod.GET)
 	public @ResponseBody PageList<User> listUser(Integer start,Integer limit,String query){
 		PageParam page = new PageParam(start, limit);
 		int count = userService.countListUser(query);
@@ -33,6 +31,6 @@ public class UserController {
 		if(count>page.getStart())
 			result.setList(userService.listUser(page.getStart(), page.getLimit(),query));
 		return result;
-    }
+    }*/
     
 }

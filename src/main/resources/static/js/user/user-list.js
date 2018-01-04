@@ -36,6 +36,7 @@ function paramsing(){
  *  用户列表信息
  */
 function userList(){
+	var loginName = $("#loginName").val();//用于判断是否为admin
 	paramsing();
 	$("#userList").empty();
 	$.ajax({
@@ -44,6 +45,11 @@ function userList(){
 		data:params,
 		success : function(data){
 			$("#userTempl").tmpl(data).appendTo("#userList");
+			if(loginName == "admin"){
+				$(".to-permission").show();
+			}else{
+				$(".to-permission").hide();
+			}
 			pageing(data.count);
 		},error:function(data){
 			layer.alert("出现错误信息!");

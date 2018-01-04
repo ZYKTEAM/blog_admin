@@ -1452,3 +1452,969 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
 2018-01-03 16:37:30.585  INFO 532 --- [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
 2018-01-03 16:37:30.611  INFO 532 --- [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
 2018-01-03 16:37:31.347  INFO 532 --- [http-nio-8089-exec-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-01-04 09:48:17.498  INFO 13388 --- [main] com.myblog.Application                   : Starting Application on MSI with PID 13388 (E:\workspaces\blog_admin\target\classes started by 11641 in E:\workspaces\blog_admin)
+2018-01-04 09:48:17.522  INFO 13388 --- [main] com.myblog.Application                   : No active profile set, falling back to default profiles: default
+2018-01-04 09:48:18.003  INFO 13388 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@327af41b: startup date [Thu Jan 04 09:48:17 GMT+08:00 2018]; root of context hierarchy
+2018-01-04 09:48:19.238  INFO 13388 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'thymeleafResourceResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=beansConfiguration; factoryMethodName=thymeleafResourceResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/myblog/config/BeansConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$Thymeleaf2Configuration$DefaultTemplateResolverConfiguration; factoryMethodName=thymeleafResourceResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/thymeleaf/ThymeleafAutoConfiguration$Thymeleaf2Configuration$DefaultTemplateResolverConfiguration.class]]
+2018-01-04 09:48:20.767  INFO 13388 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8089 (http)
+2018-01-04 09:48:20.777  INFO 13388 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-01-04 09:48:20.779  INFO 13388 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-01-04 09:48:20.968  INFO 13388 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/admin]  : Initializing Spring embedded WebApplicationContext
+2018-01-04 09:48:20.969  INFO 13388 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2969 ms
+2018-01-04 09:48:22.918  INFO 13388 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-01-04 09:48:22.918  INFO 13388 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-01-04 09:48:22.919  INFO 13388 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-01-04 09:48:22.919  INFO 13388 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-01-04 09:48:22.920  INFO 13388 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-01-04 09:48:22.921  INFO 13388 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'druidStatFilter' to urls: [/*]
+2018-01-04 09:48:22.921  INFO 13388 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'casAuthenticationFilter' to: [/*]
+2018-01-04 09:48:22.921  INFO 13388 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'singleSignOutFilter' to: [/*]
+2018-01-04 09:48:22.921  INFO 13388 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'logoutFilter' to: [/*]
+2018-01-04 09:48:22.921  INFO 13388 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-01-04 09:48:22.923  INFO 13388 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'com.myblog.druid.DruidStatViewServlet' to [/druid/*]
+2018-01-04 09:48:23.936  INFO 13388 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5be052ca, org.springframework.security.web.context.SecurityContextPersistenceFilter@759de304, org.springframework.security.web.header.HeaderWriterFilter@3b4825f0, org.springframework.security.web.authentication.logout.LogoutFilter@2a91a711, org.springframework.security.web.authentication.logout.LogoutFilter@682abca7, com.myblog.security.CustomSingleSignOutFilter@1482317f, org.springframework.security.cas.web.CasAuthenticationFilter@40f758ba, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@294f9d50, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@405b6d75, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2007435e, org.springframework.security.web.session.SessionManagementFilter@7980cf2c, org.springframework.security.web.access.ExceptionTranslationFilter@4dde8976, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@9f674ac]
+2018-01-04 09:48:24.346  INFO 13388 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@327af41b: startup date [Thu Jan 04 09:48:17 GMT+08:00 2018]; root of context hierarchy
+2018-01-04 09:48:24.571  INFO 13388 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rolePermissions],methods=[POST]}" onto public com.myblog.ulits.HttpResults com.myblog.controller.PermissionController.saveRolePermissions(java.lang.Integer,java.lang.Long,java.lang.Long[])
+2018-01-04 09:48:24.573  INFO 13388 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/permissions/pid],methods=[GET]}" onto public java.util.List<com.myblog.domain.TreeNode> com.myblog.controller.PermissionController.findPermissionsByPid(java.lang.Long)
+2018-01-04 09:48:24.574  INFO 13388 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rolePermissions/refid],methods=[GET]}" onto public com.myblog.ulits.HttpResults com.myblog.controller.PermissionController.findRolePermissionsByRefId(java.lang.Integer,java.lang.Long)
+2018-01-04 09:48:24.574  INFO 13388 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/permissions],methods=[GET]}" onto public java.util.List<com.myblog.domain.Permission> com.myblog.controller.PermissionController.findPermissions()
+2018-01-04 09:48:24.575  INFO 13388 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/role],methods=[GET]}" onto public java.lang.String com.myblog.controller.RoleController.index(org.springframework.ui.Model)
+2018-01-04 09:48:24.576  INFO 13388 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/roles],methods=[GET]}" onto public com.myblog.ulits.PageList<com.myblog.domain.Role> com.myblog.controller.RoleController.roles(java.lang.Integer,java.lang.Integer,java.lang.String)
+2018-01-04 09:48:24.577  INFO 13388 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/findRoleUserByRoleId],methods=[GET]}" onto public java.util.List<com.myblog.domain.UserRole> com.myblog.controller.RoleController.findRoleUserByRoleId(java.lang.Long)
+2018-01-04 09:48:24.577  INFO 13388 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/roleUser],methods=[POST]}" onto public java.lang.Integer com.myblog.controller.RoleController.roleUser(java.lang.Long[],java.lang.Long[],java.lang.Long)
+2018-01-04 09:48:24.577  INFO 13388 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/roles],methods=[POST]}" onto public java.lang.Object com.myblog.controller.RoleController.saveRole(com.myblog.domain.Role)
+2018-01-04 09:48:24.577  INFO 13388 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/roles/{id}],methods=[GET]}" onto public java.lang.Object com.myblog.controller.RoleController.getRoleById(java.lang.Long)
+2018-01-04 09:48:24.578  INFO 13388 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user],methods=[GET]}" onto public java.lang.String com.myblog.controller.UserController.index(org.springframework.ui.Model)
+2018-01-04 09:48:24.579  INFO 13388 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/listUser],methods=[GET]}" onto public com.myblog.ulits.PageList<com.myblog.domain.User> com.myblog.controller.UserController.listUser(java.lang.Integer,java.lang.Integer,java.lang.String)
+2018-01-04 09:48:24.585  INFO 13388 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-01-04 09:48:24.586  INFO 13388 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-01-04 09:48:24.651  INFO 13388 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-04 09:48:24.652  INFO 13388 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-04 09:48:25.249  INFO 13388 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-01-04 09:48:25.251  INFO 13388 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'druidDataSource' has been autodetected for JMX exposure
+2018-01-04 09:48:25.258  INFO 13388 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'druidDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=druidDataSource,type=DruidDataSource]
+2018-01-04 09:48:25.674  INFO 13388 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8089 (http)
+2018-01-04 09:48:25.679  INFO 13388 --- [main] com.myblog.Application                   : Started Application in 8.648 seconds (JVM running for 9.332)
+2018-01-04 09:48:38.745  INFO 13388 --- [http-nio-8089-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1514448414; _ga=GA1.1.35197324.1514448414; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%227079281%22%2C%22%24device_id%22%3A%221609c28e795a2b-0f37c80dfe6b17-5b44271d-2073600-1609c28e7968bb%22%2C%22first_id%22%3A%221609c28e795a2b-0f37c80dfe6b17-5b44271d-2073600-1609c28e7968bb%22%7D] that contained an invalid cookie. That cookie will be ignored.Note: further occurrences of this error will be logged at DEBUG level.
+2018-01-04 09:48:38.755  INFO 13388 --- [http-nio-8089-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/admin]  : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-01-04 09:48:38.755  INFO 13388 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-01-04 09:48:38.783  INFO 13388 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+2018-01-04 09:48:44.266  INFO 13388 --- [http-nio-8089-exec-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-01-04 10:18:49.388 ERROR 13388 --- [Druid-ConnectionPool-Create-1405455789] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://47.94.14.214:3306/blog_user?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true, errorCode 0, state 08S01
+
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_101]
+	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_101]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2222) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2017) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_101]
+	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_101]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:149) ~[druid-1.1.5.jar:1.1.5]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218) ~[druid-1.1.5.jar:1.1.5]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:143) ~[druid-1.1.5.jar:1.1.5]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1470) ~[druid-1.1.5.jar:1.1.5]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1533) ~[druid-1.1.5.jar:1.1.5]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2333) ~[druid-1.1.5.jar:1.1.5]
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_101]
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[na:1.8.0_101]
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_101]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	... 18 common frames omitted
+
+2018-01-04 10:18:58.271  WARN 13388 --- [http-nio-8089-exec-3] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1
+2018-01-04 10:19:10.393 ERROR 13388 --- [Druid-ConnectionPool-Create-1405455789] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://47.94.14.214:3306/blog_user?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true, errorCode 0, state 08S01
+
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_101]
+	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_101]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2222) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2017) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_101]
+	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_101]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:149) ~[druid-1.1.5.jar:1.1.5]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218) ~[druid-1.1.5.jar:1.1.5]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:143) ~[druid-1.1.5.jar:1.1.5]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1470) ~[druid-1.1.5.jar:1.1.5]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1533) ~[druid-1.1.5.jar:1.1.5]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2333) ~[druid-1.1.5.jar:1.1.5]
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_101]
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[na:1.8.0_101]
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_101]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	... 18 common frames omitted
+
+2018-01-04 10:19:28.299 ERROR 13388 --- [http-nio-8089-exec-3] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/admin] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.alibaba.druid.pool.GetConnectionTimeoutException: wait millis 30000, active 0, maxActive 50, creating 1
+### The error may exist in file [E:\workspaces\blog_admin\target\classes\mapper\blog\user\PermissionDao.xml]
+### The error may involve com.myblog.mapper.PermissionMapper.findPermissionsByPId
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.alibaba.druid.pool.GetConnectionTimeoutException: wait millis 30000, active 0, maxActive 50, creating 1] with root cause
+
+java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_101]
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[na:1.8.0_101]
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_101]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2222) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2017) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_101]
+	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_101]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:149) ~[druid-1.1.5.jar:1.1.5]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218) ~[druid-1.1.5.jar:1.1.5]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:143) ~[druid-1.1.5.jar:1.1.5]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1470) ~[druid-1.1.5.jar:1.1.5]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1533) ~[druid-1.1.5.jar:1.1.5]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2333) ~[druid-1.1.5.jar:1.1.5]
+
+2018-01-04 10:19:31.566 ERROR 13388 --- [Druid-ConnectionPool-Create-1405455789] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://47.94.14.214:3306/blog_user?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true, errorCode 0, state 08S01
+
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_101]
+	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_101]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2222) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2017) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_101]
+	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_101]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:149) ~[druid-1.1.5.jar:1.1.5]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218) ~[druid-1.1.5.jar:1.1.5]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:143) ~[druid-1.1.5.jar:1.1.5]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1470) ~[druid-1.1.5.jar:1.1.5]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1533) ~[druid-1.1.5.jar:1.1.5]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2333) ~[druid-1.1.5.jar:1.1.5]
+Caused by: java.net.SocketException: Software caused connection abort: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_101]
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[na:1.8.0_101]
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_101]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	... 18 common frames omitted
+
+2018-01-04 11:05:01.054  INFO 11628 --- [main] com.myblog.Application                   : Starting Application on MSI with PID 11628 (E:\workspaces\blog_admin\target\classes started by 11641 in E:\workspaces\blog_admin)
+2018-01-04 11:05:01.060  INFO 11628 --- [main] com.myblog.Application                   : No active profile set, falling back to default profiles: default
+2018-01-04 11:05:01.526  INFO 11628 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6cb6decd: startup date [Thu Jan 04 11:05:01 GMT+08:00 2018]; root of context hierarchy
+2018-01-04 11:05:02.289  INFO 11628 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'thymeleafResourceResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=beansConfiguration; factoryMethodName=thymeleafResourceResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/myblog/config/BeansConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$Thymeleaf2Configuration$DefaultTemplateResolverConfiguration; factoryMethodName=thymeleafResourceResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/thymeleaf/ThymeleafAutoConfiguration$Thymeleaf2Configuration$DefaultTemplateResolverConfiguration.class]]
+2018-01-04 11:05:03.064  WARN 11628 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatEmbeddedServletContainerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/EmbeddedServletContainerAutoConfiguration$EmbeddedTomcat.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: com$ane56$apsc$base$log$annotation$SystemServiceLog
+2018-01-04 11:05:03.080  INFO 11628 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-01-04 11:05:03.094 ERROR 11628 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatEmbeddedServletContainerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/EmbeddedServletContainerAutoConfiguration$EmbeddedTomcat.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: com$ane56$apsc$base$log$annotation$SystemServiceLog
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537) ~[spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at com.myblog.Application.main(Application.java:26) [classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatEmbeddedServletContainerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/EmbeddedServletContainerAutoConfiguration$EmbeddedTomcat.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: com$ane56$apsc$base$log$annotation$SystemServiceLog
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:479) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.getEmbeddedServletContainerFactory(EmbeddedWebApplicationContext.java:199) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:162) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: com$ane56$apsc$base$log$annotation$SystemServiceLog
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:372) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:92) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:102) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:88) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:103) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:248) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1037) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1011) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:473) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	... 15 common frames omitted
+Caused by: java.lang.IllegalArgumentException: error Type referred to is not an annotation type: com$ane56$apsc$base$log$annotation$SystemServiceLog
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:301) ~[aspectjweaver-1.8.11.jar:1.8.11]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:217) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.checkReadyToMatch(AspectJExpressionPointcut.java:190) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:169) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:220) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:279) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:311) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:119) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:89) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:70) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:346) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:298) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:423) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1633) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	... 37 common frames omitted
+
+2018-01-04 11:07:13.461  INFO 15184 --- [main] com.myblog.Application                   : Starting Application on MSI with PID 15184 (E:\workspaces\blog_admin\target\classes started by 11641 in E:\workspaces\blog_admin)
+2018-01-04 11:07:13.467  INFO 15184 --- [main] com.myblog.Application                   : No active profile set, falling back to default profiles: default
+2018-01-04 11:07:13.725  INFO 15184 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6cb6decd: startup date [Thu Jan 04 11:07:13 GMT+08:00 2018]; root of context hierarchy
+2018-01-04 11:07:14.370  INFO 15184 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'thymeleafResourceResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=beansConfiguration; factoryMethodName=thymeleafResourceResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/myblog/config/BeansConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$Thymeleaf2Configuration$DefaultTemplateResolverConfiguration; factoryMethodName=thymeleafResourceResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/thymeleaf/ThymeleafAutoConfiguration$Thymeleaf2Configuration$DefaultTemplateResolverConfiguration.class]]
+2018-01-04 11:07:14.956  WARN 15184 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatEmbeddedServletContainerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/EmbeddedServletContainerAutoConfiguration$EmbeddedTomcat.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: com$ane56$apsc$base$log$annotation$SystemControllerLog
+2018-01-04 11:07:14.965  INFO 15184 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-01-04 11:07:14.974 ERROR 15184 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatEmbeddedServletContainerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/EmbeddedServletContainerAutoConfiguration$EmbeddedTomcat.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: com$ane56$apsc$base$log$annotation$SystemControllerLog
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537) ~[spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at com.myblog.Application.main(Application.java:26) [classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatEmbeddedServletContainerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/EmbeddedServletContainerAutoConfiguration$EmbeddedTomcat.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: com$ane56$apsc$base$log$annotation$SystemControllerLog
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:479) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.getEmbeddedServletContainerFactory(EmbeddedWebApplicationContext.java:199) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:162) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: com$ane56$apsc$base$log$annotation$SystemControllerLog
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:372) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:92) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:102) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:88) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:103) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:248) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1037) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1011) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:473) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	... 15 common frames omitted
+Caused by: java.lang.IllegalArgumentException: error Type referred to is not an annotation type: com$ane56$apsc$base$log$annotation$SystemControllerLog
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:301) ~[aspectjweaver-1.8.11.jar:1.8.11]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:217) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.checkReadyToMatch(AspectJExpressionPointcut.java:190) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:169) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:220) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:279) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:311) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:119) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:89) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:70) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:346) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:298) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:423) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1633) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	... 37 common frames omitted
+
+2018-01-04 11:30:17.919  INFO 956 --- [main] com.myblog.Application                   : Starting Application on MSI with PID 956 (E:\workspaces\blog_admin\target\classes started by 11641 in E:\workspaces\blog_admin)
+2018-01-04 11:30:17.924  INFO 956 --- [main] com.myblog.Application                   : No active profile set, falling back to default profiles: default
+2018-01-04 11:30:18.168  INFO 956 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@327af41b: startup date [Thu Jan 04 11:30:18 GMT+08:00 2018]; root of context hierarchy
+2018-01-04 11:30:18.779  INFO 956 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'thymeleafResourceResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=beansConfiguration; factoryMethodName=thymeleafResourceResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/myblog/config/BeansConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$Thymeleaf2Configuration$DefaultTemplateResolverConfiguration; factoryMethodName=thymeleafResourceResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/thymeleaf/ThymeleafAutoConfiguration$Thymeleaf2Configuration$DefaultTemplateResolverConfiguration.class]]
+2018-01-04 11:30:20.157  INFO 956 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8089 (http)
+2018-01-04 11:30:20.169  INFO 956 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-01-04 11:30:20.171  INFO 956 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-01-04 11:30:20.328  INFO 956 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/admin]  : Initializing Spring embedded WebApplicationContext
+2018-01-04 11:30:20.329  INFO 956 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2165 ms
+2018-01-04 11:30:22.123 ERROR 956 --- [localhost-startStop-1] o.s.b.c.embedded.tomcat.TomcatStarter    : Error starting Tomcat context. Exception: org.springframework.beans.factory.BeanCreationException. Message: Error creating bean with name 'securityConfiguration' defined in file [E:\workspaces\blog_admin\target\classes\com\myblog\security\SecurityConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'casAuthenticationProvider' defined in class path resource [com/myblog/security/SecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.cas.authentication.CasAuthenticationProvider]: Circular reference involving containing bean 'securityConfiguration' - consider declaring the factory method as static for independence from its containing instance. Factory method 'casAuthenticationProvider' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDetailsByNameServiceWrapper' defined in class path resource [com/myblog/security/SecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.core.userdetails.UserDetailsByNameServiceWrapper]: Circular reference involving containing bean 'securityConfiguration' - consider declaring the factory method as static for independence from its containing instance. Factory method 'userDetailsByNameServiceWrapper' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customUserDetailsService': Unsatisfied dependency expressed through field 'permissionService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'permissionService': Unsatisfied dependency expressed through field 'rolePermissionMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rolePermissionMapper' defined in file [E:\workspaces\blog_admin\target\classes\com\myblog\mapper\RolePermissionMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\workspaces\blog_admin\target\classes\mapper\blog\user\LogMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'LogEntity'.  Cause: java.lang.ClassNotFoundException: Cannot find class: LogEntity
+2018-01-04 11:30:22.148  WARN 956 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+2018-01-04 11:30:22.157  INFO 956 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-01-04 11:30:22.169 ERROR 956 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537) ~[spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at com.myblog.Application.main(Application.java:26) [classes/:na]
+Caused by: org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:123) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.<init>(TomcatEmbeddedServletContainer.java:84) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getTomcatEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:554) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:179) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:164) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'securityConfiguration' defined in file [E:\workspaces\blog_admin\target\classes\com\myblog\security\SecurityConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'casAuthenticationProvider' defined in class path resource [com/myblog/security/SecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.cas.authentication.CasAuthenticationProvider]: Circular reference involving containing bean 'securityConfiguration' - consider declaring the factory method as static for independence from its containing instance. Factory method 'casAuthenticationProvider' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDetailsByNameServiceWrapper' defined in class path resource [com/myblog/security/SecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.core.userdetails.UserDetailsByNameServiceWrapper]: Circular reference involving containing bean 'securityConfiguration' - consider declaring the factory method as static for independence from its containing instance. Factory method 'userDetailsByNameServiceWrapper' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customUserDetailsService': Unsatisfied dependency expressed through field 'permissionService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'permissionService': Unsatisfied dependency expressed through field 'rolePermissionMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rolePermissionMapper' defined in file [E:\workspaces\blog_admin\target\classes\com\myblog\mapper\RolePermissionMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\workspaces\blog_admin\target\classes\mapper\blog\user\LogMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'LogEntity'.  Cause: java.lang.ClassNotFoundException: Cannot find class: LogEntity
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:372) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:234) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:182) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:177) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:159) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:80) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.getServletContextInitializerBeans(EmbeddedWebApplicationContext.java:241) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.selfInitialize(EmbeddedWebApplicationContext.java:228) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.access$000(EmbeddedWebApplicationContext.java:89) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext$1.onStartup(EmbeddedWebApplicationContext.java:213) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:55) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5196) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1419) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1409) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at java.util.concurrent.FutureTask.run(Unknown Source) ~[na:1.8.0_101]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:1.8.0_101]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:1.8.0_101]
+	at java.lang.Thread.run(Unknown Source) ~[na:1.8.0_101]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'casAuthenticationProvider' defined in class path resource [com/myblog/security/SecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.cas.authentication.CasAuthenticationProvider]: Circular reference involving containing bean 'securityConfiguration' - consider declaring the factory method as static for independence from its containing instance. Factory method 'casAuthenticationProvider' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDetailsByNameServiceWrapper' defined in class path resource [com/myblog/security/SecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.core.userdetails.UserDetailsByNameServiceWrapper]: Circular reference involving containing bean 'securityConfiguration' - consider declaring the factory method as static for independence from its containing instance. Factory method 'userDetailsByNameServiceWrapper' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customUserDetailsService': Unsatisfied dependency expressed through field 'permissionService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'permissionService': Unsatisfied dependency expressed through field 'rolePermissionMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rolePermissionMapper' defined in file [E:\workspaces\blog_admin\target\classes\com\myblog\mapper\RolePermissionMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\workspaces\blog_admin\target\classes\mapper\blog\user\LogMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'LogEntity'.  Cause: java.lang.ClassNotFoundException: Cannot find class: LogEntity
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.obtainBeanInstanceFromFactory(ConfigurationClassEnhancer.java:389) ~[spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361) ~[spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at com.myblog.security.SecurityConfiguration$$EnhancerBySpringCGLIB$$ebd014d4.casAuthenticationProvider(<generated>) ~[classes/:na]
+	at com.myblog.security.SecurityConfiguration.configureGlobal(SecurityConfiguration.java:113) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_101]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:701) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	... 32 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.cas.authentication.CasAuthenticationProvider]: Circular reference involving containing bean 'securityConfiguration' - consider declaring the factory method as static for independence from its containing instance. Factory method 'casAuthenticationProvider' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDetailsByNameServiceWrapper' defined in class path resource [com/myblog/security/SecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.core.userdetails.UserDetailsByNameServiceWrapper]: Circular reference involving containing bean 'securityConfiguration' - consider declaring the factory method as static for independence from its containing instance. Factory method 'userDetailsByNameServiceWrapper' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customUserDetailsService': Unsatisfied dependency expressed through field 'permissionService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'permissionService': Unsatisfied dependency expressed through field 'rolePermissionMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rolePermissionMapper' defined in file [E:\workspaces\blog_admin\target\classes\com\myblog\mapper\RolePermissionMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\workspaces\blog_admin\target\classes\mapper\blog\user\LogMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'LogEntity'.  Cause: java.lang.ClassNotFoundException: Cannot find class: LogEntity
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	... 53 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDetailsByNameServiceWrapper' defined in class path resource [com/myblog/security/SecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.core.userdetails.UserDetailsByNameServiceWrapper]: Circular reference involving containing bean 'securityConfiguration' - consider declaring the factory method as static for independence from its containing instance. Factory method 'userDetailsByNameServiceWrapper' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customUserDetailsService': Unsatisfied dependency expressed through field 'permissionService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'permissionService': Unsatisfied dependency expressed through field 'rolePermissionMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rolePermissionMapper' defined in file [E:\workspaces\blog_admin\target\classes\com\myblog\mapper\RolePermissionMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\workspaces\blog_admin\target\classes\mapper\blog\user\LogMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'LogEntity'.  Cause: java.lang.ClassNotFoundException: Cannot find class: LogEntity
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.obtainBeanInstanceFromFactory(ConfigurationClassEnhancer.java:389) ~[spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361) ~[spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at com.myblog.security.SecurityConfiguration$$EnhancerBySpringCGLIB$$ebd014d4.userDetailsByNameServiceWrapper(<generated>) ~[classes/:na]
+	at com.myblog.security.SecurityConfiguration.casAuthenticationProvider(SecurityConfiguration.java:45) ~[classes/:na]
+	at com.myblog.security.SecurityConfiguration$$EnhancerBySpringCGLIB$$ebd014d4.CGLIB$casAuthenticationProvider$11(<generated>) ~[classes/:na]
+	at com.myblog.security.SecurityConfiguration$$EnhancerBySpringCGLIB$$ebd014d4$$FastClassBySpringCGLIB$$904b053a.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) ~[spring-core-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358) ~[spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at com.myblog.security.SecurityConfiguration$$EnhancerBySpringCGLIB$$ebd014d4.casAuthenticationProvider(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_101]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	... 54 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.core.userdetails.UserDetailsByNameServiceWrapper]: Circular reference involving containing bean 'securityConfiguration' - consider declaring the factory method as static for independence from its containing instance. Factory method 'userDetailsByNameServiceWrapper' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customUserDetailsService': Unsatisfied dependency expressed through field 'permissionService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'permissionService': Unsatisfied dependency expressed through field 'rolePermissionMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rolePermissionMapper' defined in file [E:\workspaces\blog_admin\target\classes\com\myblog\mapper\RolePermissionMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\workspaces\blog_admin\target\classes\mapper\blog\user\LogMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'LogEntity'.  Cause: java.lang.ClassNotFoundException: Cannot find class: LogEntity
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	... 76 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customUserDetailsService': Unsatisfied dependency expressed through field 'permissionService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'permissionService': Unsatisfied dependency expressed through field 'rolePermissionMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rolePermissionMapper' defined in file [E:\workspaces\blog_admin\target\classes\com\myblog\mapper\RolePermissionMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\workspaces\blog_admin\target\classes\mapper\blog\user\LogMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'LogEntity'.  Cause: java.lang.ClassNotFoundException: Cannot find class: LogEntity
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.obtainBeanInstanceFromFactory(ConfigurationClassEnhancer.java:389) ~[spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361) ~[spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at com.myblog.security.SecurityConfiguration$$EnhancerBySpringCGLIB$$ebd014d4.customUserDetailsService(<generated>) ~[classes/:na]
+	at com.myblog.security.SecurityConfiguration.userDetailsByNameServiceWrapper(SecurityConfiguration.java:54) ~[classes/:na]
+	at com.myblog.security.SecurityConfiguration$$EnhancerBySpringCGLIB$$ebd014d4.CGLIB$userDetailsByNameServiceWrapper$8(<generated>) ~[classes/:na]
+	at com.myblog.security.SecurityConfiguration$$EnhancerBySpringCGLIB$$ebd014d4$$FastClassBySpringCGLIB$$904b053a.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) ~[spring-core-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358) ~[spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at com.myblog.security.SecurityConfiguration$$EnhancerBySpringCGLIB$$ebd014d4.userDetailsByNameServiceWrapper(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_101]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	... 77 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'permissionService': Unsatisfied dependency expressed through field 'rolePermissionMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rolePermissionMapper' defined in file [E:\workspaces\blog_admin\target\classes\com\myblog\mapper\RolePermissionMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\workspaces\blog_admin\target\classes\mapper\blog\user\LogMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'LogEntity'.  Cause: java.lang.ClassNotFoundException: Cannot find class: LogEntity
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	... 100 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rolePermissionMapper' defined in file [E:\workspaces\blog_admin\target\classes\com\myblog\mapper\RolePermissionMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\workspaces\blog_admin\target\classes\mapper\blog\user\LogMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'LogEntity'.  Cause: java.lang.ClassNotFoundException: Cannot find class: LogEntity
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1249) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	... 113 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\workspaces\blog_admin\target\classes\mapper\blog\user\LogMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'LogEntity'.  Cause: java.lang.ClassNotFoundException: Cannot find class: LogEntity
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1342) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	... 124 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\workspaces\blog_admin\target\classes\mapper\blog\user\LogMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'LogEntity'.  Cause: java.lang.ClassNotFoundException: Cannot find class: LogEntity
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	... 136 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\workspaces\blog_admin\target\classes\mapper\blog\user\LogMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'LogEntity'.  Cause: java.lang.ClassNotFoundException: Cannot find class: LogEntity
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:522) ~[mybatis-spring-1.3.0.jar:1.3.0]
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:381) ~[mybatis-spring-1.3.0.jar:1.3.0]
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:546) ~[mybatis-spring-1.3.0.jar:1.3.0]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:130) ~[mybatis-spring-boot-autoconfigure-1.1.1.jar:1.1.1]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$ecd94104.CGLIB$sqlSessionFactory$0(<generated>) ~[mybatis-spring-boot-autoconfigure-1.1.1.jar:1.1.1]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$ecd94104$$FastClassBySpringCGLIB$$edab0f62.invoke(<generated>) ~[mybatis-spring-boot-autoconfigure-1.1.1.jar:1.1.1]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) ~[spring-core-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358) ~[spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$ecd94104.sqlSessionFactory(<generated>) ~[mybatis-spring-boot-autoconfigure-1.1.1.jar:1.1.1]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_101]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	... 137 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'LogEntity'.  Cause: java.lang.ClassNotFoundException: Cannot find class: LogEntity
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:92) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:520) ~[mybatis-spring-1.3.0.jar:1.3.0]
+	... 150 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'LogEntity'.  Cause: java.lang.ClassNotFoundException: Cannot find class: LogEntity
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:74) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:135) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:128) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:118) ~[mybatis-3.4.0.jar:3.4.0]
+	... 152 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'LogEntity'.  Cause: java.lang.ClassNotFoundException: Cannot find class: LogEntity
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116) ~[mybatis-3.4.0.jar:3.4.0]
+	... 156 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: LogEntity
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116) ~[mybatis-3.4.0.jar:3.4.0]
+	... 158 common frames omitted
+
+2018-01-04 11:31:20.660  INFO 8444 --- [main] com.myblog.Application                   : Starting Application on MSI with PID 8444 (E:\workspaces\blog_admin\target\classes started by 11641 in E:\workspaces\blog_admin)
+2018-01-04 11:31:20.667  INFO 8444 --- [main] com.myblog.Application                   : No active profile set, falling back to default profiles: default
+2018-01-04 11:31:20.887  INFO 8444 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@327af41b: startup date [Thu Jan 04 11:31:20 GMT+08:00 2018]; root of context hierarchy
+2018-01-04 11:31:21.605  INFO 8444 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'thymeleafResourceResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=beansConfiguration; factoryMethodName=thymeleafResourceResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/myblog/config/BeansConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$Thymeleaf2Configuration$DefaultTemplateResolverConfiguration; factoryMethodName=thymeleafResourceResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/thymeleaf/ThymeleafAutoConfiguration$Thymeleaf2Configuration$DefaultTemplateResolverConfiguration.class]]
+2018-01-04 11:31:22.833  INFO 8444 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8089 (http)
+2018-01-04 11:31:22.847  INFO 8444 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-01-04 11:31:22.849  INFO 8444 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-01-04 11:31:22.957  INFO 8444 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/admin]  : Initializing Spring embedded WebApplicationContext
+2018-01-04 11:31:22.957  INFO 8444 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2074 ms
+2018-01-04 11:31:24.977  INFO 8444 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-01-04 11:31:24.978  INFO 8444 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-01-04 11:31:24.978  INFO 8444 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-01-04 11:31:24.978  INFO 8444 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-01-04 11:31:24.979  INFO 8444 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-01-04 11:31:24.980  INFO 8444 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'druidStatFilter' to urls: [/*]
+2018-01-04 11:31:24.980  INFO 8444 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'casAuthenticationFilter' to: [/*]
+2018-01-04 11:31:24.980  INFO 8444 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'singleSignOutFilter' to: [/*]
+2018-01-04 11:31:24.980  INFO 8444 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'logoutFilter' to: [/*]
+2018-01-04 11:31:24.980  INFO 8444 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-01-04 11:31:24.982  INFO 8444 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'com.myblog.druid.DruidStatViewServlet' to [/druid/*]
+2018-01-04 11:31:25.148  WARN 8444 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'logAspect': Unsatisfied dependency expressed through field 'logMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.myblog.mapper.ILogMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2018-01-04 11:31:25.152  INFO 8444 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-01-04 11:31:25.241  INFO 8444 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-01-04 11:31:25.374 ERROR 8444 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field logMapper in com.myblog.log.aspect.LogAspect required a bean of type 'com.myblog.mapper.ILogMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.myblog.mapper.ILogMapper' in your configuration.
+
+2018-01-04 11:32:24.148  INFO 17400 --- [main] com.myblog.Application                   : Starting Application on MSI with PID 17400 (E:\workspaces\blog_admin\target\classes started by 11641 in E:\workspaces\blog_admin)
+2018-01-04 11:32:24.153  INFO 17400 --- [main] com.myblog.Application                   : No active profile set, falling back to default profiles: default
+2018-01-04 11:32:24.418  INFO 17400 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@327af41b: startup date [Thu Jan 04 11:32:24 GMT+08:00 2018]; root of context hierarchy
+2018-01-04 11:32:25.080  INFO 17400 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'thymeleafResourceResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=beansConfiguration; factoryMethodName=thymeleafResourceResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/myblog/config/BeansConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$Thymeleaf2Configuration$DefaultTemplateResolverConfiguration; factoryMethodName=thymeleafResourceResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/thymeleaf/ThymeleafAutoConfiguration$Thymeleaf2Configuration$DefaultTemplateResolverConfiguration.class]]
+2018-01-04 11:32:26.593  INFO 17400 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8089 (http)
+2018-01-04 11:32:26.612  INFO 17400 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-01-04 11:32:26.614  INFO 17400 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-01-04 11:32:26.754  INFO 17400 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/admin]  : Initializing Spring embedded WebApplicationContext
+2018-01-04 11:32:26.754  INFO 17400 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2341 ms
+2018-01-04 11:32:29.066  INFO 17400 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-01-04 11:32:29.067  INFO 17400 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-01-04 11:32:29.067  INFO 17400 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-01-04 11:32:29.067  INFO 17400 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-01-04 11:32:29.068  INFO 17400 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-01-04 11:32:29.068  INFO 17400 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'druidStatFilter' to urls: [/*]
+2018-01-04 11:32:29.068  INFO 17400 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'casAuthenticationFilter' to: [/*]
+2018-01-04 11:32:29.069  INFO 17400 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'singleSignOutFilter' to: [/*]
+2018-01-04 11:32:29.069  INFO 17400 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'logoutFilter' to: [/*]
+2018-01-04 11:32:29.069  INFO 17400 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-01-04 11:32:29.071  INFO 17400 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'com.myblog.druid.DruidStatViewServlet' to [/druid/*]
+2018-01-04 11:32:30.000  INFO 17400 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@14d8e132, org.springframework.security.web.context.SecurityContextPersistenceFilter@55361f03, org.springframework.security.web.header.HeaderWriterFilter@38159384, org.springframework.security.web.authentication.logout.LogoutFilter@e9f1bcc, org.springframework.security.web.authentication.logout.LogoutFilter@6b8b5020, com.myblog.security.CustomSingleSignOutFilter@4b47b0f9, org.springframework.security.cas.web.CasAuthenticationFilter@39b20fc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@132e3594, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4584304, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f4a1cac, org.springframework.security.web.session.SessionManagementFilter@14f060b8, org.springframework.security.web.access.ExceptionTranslationFilter@4a2bf50f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2997ddfc]
+2018-01-04 11:32:30.509  INFO 17400 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@327af41b: startup date [Thu Jan 04 11:32:24 GMT+08:00 2018]; root of context hierarchy
+2018-01-04 11:32:30.613  INFO 17400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/article],methods=[GET]}" onto public java.lang.String com.myblog.controller.ArticleController.index(org.springframework.ui.Model)
+2018-01-04 11:32:30.614  INFO 17400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rolePermissions/refid],methods=[GET]}" onto public com.myblog.ulits.HttpResults com.myblog.controller.PermissionController.findRolePermissionsByRefId(java.lang.Integer,java.lang.Long)
+2018-01-04 11:32:30.614  INFO 17400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rolePermissions],methods=[POST]}" onto public com.myblog.ulits.HttpResults com.myblog.controller.PermissionController.saveRolePermissions(java.lang.Integer,java.lang.Long,java.lang.Long[])
+2018-01-04 11:32:30.615  INFO 17400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/permissions/pid],methods=[GET]}" onto public java.util.List<com.myblog.domain.TreeNode> com.myblog.controller.PermissionController.findPermissionsByPid(java.lang.Long)
+2018-01-04 11:32:30.615  INFO 17400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/permissions],methods=[GET]}" onto public java.util.List<com.myblog.domain.Permission> com.myblog.controller.PermissionController.findPermissions()
+2018-01-04 11:32:30.616  INFO 17400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/role],methods=[GET]}" onto public java.lang.String com.myblog.controller.RoleController.index(org.springframework.ui.Model)
+2018-01-04 11:32:30.617  INFO 17400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/findRoleUserByRoleId],methods=[GET]}" onto public java.util.List<com.myblog.domain.UserRole> com.myblog.controller.RoleController.findRoleUserByRoleId(java.lang.Long)
+2018-01-04 11:32:30.618  INFO 17400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/roles],methods=[GET]}" onto public com.myblog.ulits.PageList<com.myblog.domain.Role> com.myblog.controller.RoleController.roles(java.lang.Integer,java.lang.Integer,java.lang.String)
+2018-01-04 11:32:30.618  INFO 17400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/roles/{id}],methods=[GET]}" onto public java.lang.Object com.myblog.controller.RoleController.getRoleById(java.lang.Long)
+2018-01-04 11:32:30.618  INFO 17400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/roles],methods=[POST]}" onto public java.lang.Object com.myblog.controller.RoleController.saveRole(com.myblog.domain.Role)
+2018-01-04 11:32:30.618  INFO 17400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/roleUser],methods=[POST]}" onto public java.lang.Integer com.myblog.controller.RoleController.roleUser(java.lang.Long[],java.lang.Long[],java.lang.Long)
+2018-01-04 11:32:30.619  INFO 17400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user],methods=[GET]}" onto public java.lang.String com.myblog.controller.UserController.index(org.springframework.ui.Model)
+2018-01-04 11:32:30.619  INFO 17400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/listUser],methods=[GET]}" onto public com.myblog.ulits.PageList<com.myblog.domain.User> com.myblog.controller.UserController.listUser(java.lang.Integer,java.lang.Integer,java.lang.String)
+2018-01-04 11:32:30.624  INFO 17400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-01-04 11:32:30.624  INFO 17400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-01-04 11:32:30.708  INFO 17400 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-04 11:32:30.709  INFO 17400 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-04 11:32:31.396  INFO 17400 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-01-04 11:32:31.398  INFO 17400 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'druidDataSource' has been autodetected for JMX exposure
+2018-01-04 11:32:31.404  INFO 17400 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'druidDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=druidDataSource,type=DruidDataSource]
+2018-01-04 11:32:31.480  INFO 17400 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8089 (http)
+2018-01-04 11:32:31.489  INFO 17400 --- [main] com.myblog.Application                   : Started Application in 7.712 seconds (JVM running for 8.06)
+2018-01-04 11:32:34.768  INFO 17400 --- [http-nio-8089-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1514448414; _ga=GA1.1.35197324.1514448414; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%227079281%22%2C%22%24device_id%22%3A%221609c28e795a2b-0f37c80dfe6b17-5b44271d-2073600-1609c28e7968bb%22%2C%22first_id%22%3A%221609c28e795a2b-0f37c80dfe6b17-5b44271d-2073600-1609c28e7968bb%22%7D] that contained an invalid cookie. That cookie will be ignored.Note: further occurrences of this error will be logged at DEBUG level.
+2018-01-04 11:32:34.776  INFO 17400 --- [http-nio-8089-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/admin]  : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-01-04 11:32:34.776  INFO 17400 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-01-04 11:32:34.824  INFO 17400 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 48 ms
+2018-01-04 11:33:10.443  INFO 17400 --- [http-nio-8089-exec-7] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-01-04 11:33:12.340 ERROR 17400 --- [http-nio-8089-exec-10] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/admin] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.myblog.mapper.ILogMapper.insertLog] with root cause
+
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.myblog.mapper.ILogMapper.insertLog
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:214) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:48) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:59) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52) ~[mybatis-3.4.0.jar:3.4.0]
+	at com.sun.proxy.$Proxy83.insertLog(Unknown Source) ~[na:na]
+	at com.myblog.log.aspect.LogAspect.saveLog(LogAspect.java:92) ~[classes/:na]
+	at com.myblog.log.aspect.LogAspect.around(LogAspect.java:44) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_101]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:629) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:618) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:168) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673) ~[spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at com.myblog.controller.UserController$$EnhancerBySpringCGLIB$$d34b8e77.listUser(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_101]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at com.myblog.security.CustomSingleSignOutFilter.doFilter(CustomSingleSignOutFilter.java:85) ~[classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123) ~[druid-1.1.5.jar:1.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:317) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:114) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at com.myblog.security.CustomSingleSignOutFilter.doFilter(CustomSingleSignOutFilter.java:85) ~[classes/:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:64) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:347) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:263) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_101]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_101]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_101]
+
+2018-01-04 11:33:41.515  INFO 10632 --- [main] com.myblog.Application                   : Starting Application on MSI with PID 10632 (E:\workspaces\blog_admin\target\classes started by 11641 in E:\workspaces\blog_admin)
+2018-01-04 11:33:41.520  INFO 10632 --- [main] com.myblog.Application                   : No active profile set, falling back to default profiles: default
+2018-01-04 11:33:41.799  INFO 10632 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6cb6decd: startup date [Thu Jan 04 11:33:41 GMT+08:00 2018]; root of context hierarchy
+2018-01-04 11:33:42.675  INFO 10632 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'thymeleafResourceResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=beansConfiguration; factoryMethodName=thymeleafResourceResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/myblog/config/BeansConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$Thymeleaf2Configuration$DefaultTemplateResolverConfiguration; factoryMethodName=thymeleafResourceResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/thymeleaf/ThymeleafAutoConfiguration$Thymeleaf2Configuration$DefaultTemplateResolverConfiguration.class]]
+2018-01-04 11:33:43.975  INFO 10632 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8089 (http)
+2018-01-04 11:33:43.986  INFO 10632 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-01-04 11:33:43.987  INFO 10632 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-01-04 11:33:44.098  INFO 10632 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/admin]  : Initializing Spring embedded WebApplicationContext
+2018-01-04 11:33:44.099  INFO 10632 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2304 ms
+2018-01-04 11:33:46.201  INFO 10632 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-01-04 11:33:46.201  INFO 10632 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-01-04 11:33:46.202  INFO 10632 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-01-04 11:33:46.202  INFO 10632 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-01-04 11:33:46.203  INFO 10632 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-01-04 11:33:46.204  INFO 10632 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'druidStatFilter' to urls: [/*]
+2018-01-04 11:33:46.204  INFO 10632 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'casAuthenticationFilter' to: [/*]
+2018-01-04 11:33:46.204  INFO 10632 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'singleSignOutFilter' to: [/*]
+2018-01-04 11:33:46.204  INFO 10632 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'logoutFilter' to: [/*]
+2018-01-04 11:33:46.205  INFO 10632 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-01-04 11:33:46.206  INFO 10632 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'com.myblog.druid.DruidStatViewServlet' to [/druid/*]
+2018-01-04 11:33:47.014  INFO 10632 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3887c7d7, org.springframework.security.web.context.SecurityContextPersistenceFilter@11c88cca, org.springframework.security.web.header.HeaderWriterFilter@44d7e24, org.springframework.security.web.authentication.logout.LogoutFilter@62ac559f, org.springframework.security.web.authentication.logout.LogoutFilter@a2b54e3, com.myblog.security.CustomSingleSignOutFilter@29dbf4fc, org.springframework.security.cas.web.CasAuthenticationFilter@6edc649, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3b11620a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2fd39436, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@b1b471, org.springframework.security.web.session.SessionManagementFilter@7f27f59b, org.springframework.security.web.access.ExceptionTranslationFilter@251c8145, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@48bc2fce]
+2018-01-04 11:33:47.512  INFO 10632 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6cb6decd: startup date [Thu Jan 04 11:33:41 GMT+08:00 2018]; root of context hierarchy
+2018-01-04 11:33:47.610  INFO 10632 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/article],methods=[GET]}" onto public java.lang.String com.myblog.controller.ArticleController.index(org.springframework.ui.Model)
+2018-01-04 11:33:47.611  INFO 10632 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rolePermissions],methods=[POST]}" onto public com.myblog.ulits.HttpResults com.myblog.controller.PermissionController.saveRolePermissions(java.lang.Integer,java.lang.Long,java.lang.Long[])
+2018-01-04 11:33:47.612  INFO 10632 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/permissions/pid],methods=[GET]}" onto public java.util.List<com.myblog.domain.TreeNode> com.myblog.controller.PermissionController.findPermissionsByPid(java.lang.Long)
+2018-01-04 11:33:47.612  INFO 10632 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rolePermissions/refid],methods=[GET]}" onto public com.myblog.ulits.HttpResults com.myblog.controller.PermissionController.findRolePermissionsByRefId(java.lang.Integer,java.lang.Long)
+2018-01-04 11:33:47.613  INFO 10632 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/permissions],methods=[GET]}" onto public java.util.List<com.myblog.domain.Permission> com.myblog.controller.PermissionController.findPermissions()
+2018-01-04 11:33:47.614  INFO 10632 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/role],methods=[GET]}" onto public java.lang.String com.myblog.controller.RoleController.index(org.springframework.ui.Model)
+2018-01-04 11:33:47.614  INFO 10632 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/roles],methods=[GET]}" onto public com.myblog.ulits.PageList<com.myblog.domain.Role> com.myblog.controller.RoleController.roles(java.lang.Integer,java.lang.Integer,java.lang.String)
+2018-01-04 11:33:47.614  INFO 10632 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/findRoleUserByRoleId],methods=[GET]}" onto public java.util.List<com.myblog.domain.UserRole> com.myblog.controller.RoleController.findRoleUserByRoleId(java.lang.Long)
+2018-01-04 11:33:47.615  INFO 10632 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/roles],methods=[POST]}" onto public java.lang.Object com.myblog.controller.RoleController.saveRole(com.myblog.domain.Role)
+2018-01-04 11:33:47.615  INFO 10632 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/roleUser],methods=[POST]}" onto public java.lang.Integer com.myblog.controller.RoleController.roleUser(java.lang.Long[],java.lang.Long[],java.lang.Long)
+2018-01-04 11:33:47.615  INFO 10632 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/roles/{id}],methods=[GET]}" onto public java.lang.Object com.myblog.controller.RoleController.getRoleById(java.lang.Long)
+2018-01-04 11:33:47.615  INFO 10632 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user],methods=[GET]}" onto public java.lang.String com.myblog.controller.UserController.index(org.springframework.ui.Model)
+2018-01-04 11:33:47.616  INFO 10632 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/listUser],methods=[GET]}" onto public com.myblog.ulits.PageList<com.myblog.domain.User> com.myblog.controller.UserController.listUser(java.lang.Integer,java.lang.Integer,java.lang.String)
+2018-01-04 11:33:47.619  INFO 10632 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-01-04 11:33:47.619  INFO 10632 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-01-04 11:33:47.734  INFO 10632 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-04 11:33:47.735  INFO 10632 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-04 11:33:48.380  INFO 10632 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-01-04 11:33:48.382  INFO 10632 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'druidDataSource' has been autodetected for JMX exposure
+2018-01-04 11:33:48.388  INFO 10632 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'druidDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=druidDataSource,type=DruidDataSource]
+2018-01-04 11:33:48.463  INFO 10632 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8089 (http)
+2018-01-04 11:33:48.471  INFO 10632 --- [main] com.myblog.Application                   : Started Application in 7.403 seconds (JVM running for 7.827)
+2018-01-04 11:33:51.699  INFO 10632 --- [http-nio-8089-exec-2] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1514448414; _ga=GA1.1.35197324.1514448414; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%227079281%22%2C%22%24device_id%22%3A%221609c28e795a2b-0f37c80dfe6b17-5b44271d-2073600-1609c28e7968bb%22%2C%22first_id%22%3A%221609c28e795a2b-0f37c80dfe6b17-5b44271d-2073600-1609c28e7968bb%22%7D] that contained an invalid cookie. That cookie will be ignored.Note: further occurrences of this error will be logged at DEBUG level.
+2018-01-04 11:33:51.705  INFO 10632 --- [http-nio-8089-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/admin]  : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-01-04 11:33:51.706  INFO 10632 --- [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-01-04 11:33:51.743  INFO 10632 --- [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 37 ms
+2018-01-04 11:33:52.542  INFO 10632 --- [http-nio-8089-exec-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-01-04 12:16:53.084  INFO 3704 --- [main] com.myblog.Application                   : Starting Application on MSI with PID 3704 (E:\workspaces\blog_admin\target\classes started by 11641 in E:\workspaces\blog_admin)
+2018-01-04 12:16:53.090  INFO 3704 --- [main] com.myblog.Application                   : No active profile set, falling back to default profiles: default
+2018-01-04 12:16:53.467  INFO 3704 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6cb6decd: startup date [Thu Jan 04 12:16:53 GMT+08:00 2018]; root of context hierarchy
+2018-01-04 12:16:54.174  INFO 3704 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'thymeleafResourceResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=beansConfiguration; factoryMethodName=thymeleafResourceResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/myblog/config/BeansConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$Thymeleaf2Configuration$DefaultTemplateResolverConfiguration; factoryMethodName=thymeleafResourceResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/thymeleaf/ThymeleafAutoConfiguration$Thymeleaf2Configuration$DefaultTemplateResolverConfiguration.class]]
+2018-01-04 12:16:55.711  INFO 3704 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8089 (http)
+2018-01-04 12:16:55.731  INFO 3704 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-01-04 12:16:55.733  INFO 3704 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-01-04 12:16:55.885  INFO 3704 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/admin]  : Initializing Spring embedded WebApplicationContext
+2018-01-04 12:16:55.886  INFO 3704 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2424 ms
+2018-01-04 12:16:58.471  INFO 3704 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-01-04 12:16:58.472  INFO 3704 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-01-04 12:16:58.472  INFO 3704 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-01-04 12:16:58.472  INFO 3704 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-01-04 12:16:58.473  INFO 3704 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-01-04 12:16:58.474  INFO 3704 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'druidStatFilter' to urls: [/*]
+2018-01-04 12:16:58.474  INFO 3704 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'casAuthenticationFilter' to: [/*]
+2018-01-04 12:16:58.474  INFO 3704 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'singleSignOutFilter' to: [/*]
+2018-01-04 12:16:58.474  INFO 3704 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'logoutFilter' to: [/*]
+2018-01-04 12:16:58.474  INFO 3704 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-01-04 12:16:58.477  INFO 3704 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'com.myblog.druid.DruidStatViewServlet' to [/druid/*]
+2018-01-04 12:16:59.394  INFO 3704 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@37d3e140, org.springframework.security.web.context.SecurityContextPersistenceFilter@33e4b9c4, org.springframework.security.web.header.HeaderWriterFilter@5fb3111a, org.springframework.security.web.authentication.logout.LogoutFilter@4be84fad, org.springframework.security.web.authentication.logout.LogoutFilter@6812c8cc, com.myblog.security.CustomSingleSignOutFilter@6192ba79, org.springframework.security.cas.web.CasAuthenticationFilter@6e8340ff, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4602f874, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@31ab1e67, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3e53c4ad, org.springframework.security.web.session.SessionManagementFilter@544e3679, org.springframework.security.web.access.ExceptionTranslationFilter@55361f03, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@47fcefb3]
+2018-01-04 12:16:59.892  INFO 3704 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6cb6decd: startup date [Thu Jan 04 12:16:53 GMT+08:00 2018]; root of context hierarchy
+2018-01-04 12:16:59.996  INFO 3704 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/article],methods=[GET]}" onto public java.lang.String com.myblog.controller.ArticleController.index(org.springframework.ui.Model)
+2018-01-04 12:16:59.998  INFO 3704 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/log],methods=[GET]}" onto public java.lang.String com.myblog.controller.LogController.index(org.springframework.ui.Model)
+2018-01-04 12:16:59.999  INFO 3704 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/listLog],methods=[GET]}" onto public com.myblog.ulits.PageList<com.myblog.domain.LogDO> com.myblog.controller.LogController.listUser(java.lang.Integer,java.lang.Integer)
+2018-01-04 12:17:00.000  INFO 3704 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/permissions/pid],methods=[GET]}" onto public java.util.List<com.myblog.domain.TreeNode> com.myblog.controller.PermissionController.findPermissionsByPid(java.lang.Long)
+2018-01-04 12:17:00.001  INFO 3704 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rolePermissions],methods=[POST]}" onto public com.myblog.ulits.HttpResults com.myblog.controller.PermissionController.saveRolePermissions(java.lang.Integer,java.lang.Long,java.lang.Long[])
+2018-01-04 12:17:00.001  INFO 3704 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rolePermissions/refid],methods=[GET]}" onto public com.myblog.ulits.HttpResults com.myblog.controller.PermissionController.findRolePermissionsByRefId(java.lang.Integer,java.lang.Long)
+2018-01-04 12:17:00.002  INFO 3704 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/permissions],methods=[GET]}" onto public java.util.List<com.myblog.domain.Permission> com.myblog.controller.PermissionController.findPermissions()
+2018-01-04 12:17:00.003  INFO 3704 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/role],methods=[GET]}" onto public java.lang.String com.myblog.controller.RoleController.index(org.springframework.ui.Model)
+2018-01-04 12:17:00.004  INFO 3704 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/findRoleUserByRoleId],methods=[GET]}" onto public java.util.List<com.myblog.domain.UserRole> com.myblog.controller.RoleController.findRoleUserByRoleId(java.lang.Long)
+2018-01-04 12:17:00.005  INFO 3704 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/roles],methods=[GET]}" onto public com.myblog.ulits.PageList<com.myblog.domain.Role> com.myblog.controller.RoleController.roles(java.lang.Integer,java.lang.Integer,java.lang.String)
+2018-01-04 12:17:00.005  INFO 3704 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/roles],methods=[POST]}" onto public java.lang.Object com.myblog.controller.RoleController.saveRole(com.myblog.domain.Role)
+2018-01-04 12:17:00.005  INFO 3704 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/roles/{id}],methods=[GET]}" onto public java.lang.Object com.myblog.controller.RoleController.getRoleById(java.lang.Long)
+2018-01-04 12:17:00.006  INFO 3704 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/roleUser],methods=[POST]}" onto public java.lang.Integer com.myblog.controller.RoleController.roleUser(java.lang.Long[],java.lang.Long[],java.lang.Long)
+2018-01-04 12:17:00.006  INFO 3704 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user],methods=[GET]}" onto public java.lang.String com.myblog.controller.UserController.index(org.springframework.ui.Model)
+2018-01-04 12:17:00.007  INFO 3704 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/listUser],methods=[GET]}" onto public com.myblog.ulits.PageList<com.myblog.domain.User> com.myblog.controller.UserController.listUser(java.lang.Integer,java.lang.Integer,java.lang.String)
+2018-01-04 12:17:00.012  INFO 3704 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-01-04 12:17:00.013  INFO 3704 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-01-04 12:17:00.112  INFO 3704 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-04 12:17:00.112  INFO 3704 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-04 12:17:00.834  INFO 3704 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-01-04 12:17:00.835  INFO 3704 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'druidDataSource' has been autodetected for JMX exposure
+2018-01-04 12:17:00.842  INFO 3704 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'druidDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=druidDataSource,type=DruidDataSource]
+2018-01-04 12:17:00.928  INFO 3704 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8089 (http)
+2018-01-04 12:17:00.939  INFO 3704 --- [main] com.myblog.Application                   : Started Application in 8.247 seconds (JVM running for 8.609)
+2018-01-04 12:17:06.210  INFO 3704 --- [http-nio-8089-exec-2] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1514448414; _ga=GA1.1.35197324.1514448414; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%227079281%22%2C%22%24device_id%22%3A%221609c28e795a2b-0f37c80dfe6b17-5b44271d-2073600-1609c28e7968bb%22%2C%22first_id%22%3A%221609c28e795a2b-0f37c80dfe6b17-5b44271d-2073600-1609c28e7968bb%22%7D] that contained an invalid cookie. That cookie will be ignored.Note: further occurrences of this error will be logged at DEBUG level.
+2018-01-04 12:17:06.220  INFO 3704 --- [http-nio-8089-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/admin]  : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-01-04 12:17:06.220  INFO 3704 --- [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-01-04 12:17:06.254  INFO 3704 --- [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 33 ms
+2018-01-04 12:17:06.983  INFO 3704 --- [http-nio-8089-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-01-04 12:22:27.375  INFO 11400 --- [main] com.myblog.Application                   : Starting Application on MSI with PID 11400 (E:\workspaces\blog_admin\target\classes started by 11641 in E:\workspaces\blog_admin)
+2018-01-04 12:22:27.380  INFO 11400 --- [main] com.myblog.Application                   : No active profile set, falling back to default profiles: default
+2018-01-04 12:22:27.621  INFO 11400 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6cb6decd: startup date [Thu Jan 04 12:22:27 GMT+08:00 2018]; root of context hierarchy
+2018-01-04 12:22:28.280  INFO 11400 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'thymeleafResourceResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=beansConfiguration; factoryMethodName=thymeleafResourceResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/myblog/config/BeansConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$Thymeleaf2Configuration$DefaultTemplateResolverConfiguration; factoryMethodName=thymeleafResourceResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/thymeleaf/ThymeleafAutoConfiguration$Thymeleaf2Configuration$DefaultTemplateResolverConfiguration.class]]
+2018-01-04 12:22:29.951  INFO 11400 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8089 (http)
+2018-01-04 12:22:29.972  INFO 11400 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-01-04 12:22:29.974  INFO 11400 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-01-04 12:22:30.097  INFO 11400 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/admin]  : Initializing Spring embedded WebApplicationContext
+2018-01-04 12:22:30.098  INFO 11400 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2481 ms
+2018-01-04 12:22:32.225  INFO 11400 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-01-04 12:22:32.225  INFO 11400 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-01-04 12:22:32.225  INFO 11400 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-01-04 12:22:32.226  INFO 11400 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-01-04 12:22:32.227  INFO 11400 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-01-04 12:22:32.227  INFO 11400 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'druidStatFilter' to urls: [/*]
+2018-01-04 12:22:32.227  INFO 11400 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'casAuthenticationFilter' to: [/*]
+2018-01-04 12:22:32.228  INFO 11400 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'singleSignOutFilter' to: [/*]
+2018-01-04 12:22:32.228  INFO 11400 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'logoutFilter' to: [/*]
+2018-01-04 12:22:32.228  INFO 11400 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-01-04 12:22:32.230  INFO 11400 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'com.myblog.druid.DruidStatViewServlet' to [/druid/*]
+2018-01-04 12:22:33.056  INFO 11400 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@48e41b5d, org.springframework.security.web.context.SecurityContextPersistenceFilter@130cfc47, org.springframework.security.web.header.HeaderWriterFilter@6ac45c0c, org.springframework.security.web.authentication.logout.LogoutFilter@3e035863, org.springframework.security.web.authentication.logout.LogoutFilter@5ec9eefa, com.myblog.security.CustomSingleSignOutFilter@32835b50, org.springframework.security.cas.web.CasAuthenticationFilter@9f9b42e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d59e968, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c5d3a37, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@51e8d066, org.springframework.security.web.session.SessionManagementFilter@6b70d1fb, org.springframework.security.web.access.ExceptionTranslationFilter@5e905f2c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@539c4830]
+2018-01-04 12:22:33.603  INFO 11400 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6cb6decd: startup date [Thu Jan 04 12:22:27 GMT+08:00 2018]; root of context hierarchy
+2018-01-04 12:22:33.760  INFO 11400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/article],methods=[GET]}" onto public java.lang.String com.myblog.controller.ArticleController.index(org.springframework.ui.Model)
+2018-01-04 12:22:33.763  INFO 11400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/log],methods=[GET]}" onto public java.lang.String com.myblog.controller.LogController.index(org.springframework.ui.Model)
+2018-01-04 12:22:33.763  INFO 11400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/listLog],methods=[GET]}" onto public com.myblog.ulits.PageList<com.myblog.domain.LogDO> com.myblog.controller.LogController.listUser(java.lang.Integer,java.lang.Integer)
+2018-01-04 12:22:33.764  INFO 11400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rolePermissions/refid],methods=[GET]}" onto public com.myblog.ulits.HttpResults com.myblog.controller.PermissionController.findRolePermissionsByRefId(java.lang.Integer,java.lang.Long)
+2018-01-04 12:22:33.765  INFO 11400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rolePermissions],methods=[POST]}" onto public com.myblog.ulits.HttpResults com.myblog.controller.PermissionController.saveRolePermissions(java.lang.Integer,java.lang.Long,java.lang.Long[])
+2018-01-04 12:22:33.765  INFO 11400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/permissions],methods=[GET]}" onto public java.util.List<com.myblog.domain.Permission> com.myblog.controller.PermissionController.findPermissions()
+2018-01-04 12:22:33.766  INFO 11400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/permissions/pid],methods=[GET]}" onto public java.util.List<com.myblog.domain.TreeNode> com.myblog.controller.PermissionController.findPermissionsByPid(java.lang.Long)
+2018-01-04 12:22:33.767  INFO 11400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/role],methods=[GET]}" onto public java.lang.String com.myblog.controller.RoleController.index(org.springframework.ui.Model)
+2018-01-04 12:22:33.768  INFO 11400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/findRoleUserByRoleId],methods=[GET]}" onto public java.util.List<com.myblog.domain.UserRole> com.myblog.controller.RoleController.findRoleUserByRoleId(java.lang.Long)
+2018-01-04 12:22:33.768  INFO 11400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/roles],methods=[GET]}" onto public com.myblog.ulits.PageList<com.myblog.domain.Role> com.myblog.controller.RoleController.roles(java.lang.Integer,java.lang.Integer,java.lang.String)
+2018-01-04 12:22:33.769  INFO 11400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/roleUser],methods=[POST]}" onto public java.lang.Integer com.myblog.controller.RoleController.roleUser(java.lang.Long[],java.lang.Long[],java.lang.Long)
+2018-01-04 12:22:33.769  INFO 11400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/roles],methods=[POST]}" onto public java.lang.Object com.myblog.controller.RoleController.saveRole(com.myblog.domain.Role)
+2018-01-04 12:22:33.769  INFO 11400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/roles/{id}],methods=[GET]}" onto public java.lang.Object com.myblog.controller.RoleController.getRoleById(java.lang.Long)
+2018-01-04 12:22:33.770  INFO 11400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user],methods=[GET]}" onto public java.lang.String com.myblog.controller.UserController.index(org.springframework.ui.Model)
+2018-01-04 12:22:33.770  INFO 11400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/listUser],methods=[GET]}" onto public com.myblog.ulits.PageList<com.myblog.domain.User> com.myblog.controller.UserController.listUser(java.lang.Integer,java.lang.Integer,java.lang.String)
+2018-01-04 12:22:33.778  INFO 11400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-01-04 12:22:33.779  INFO 11400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-01-04 12:22:33.866  INFO 11400 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-04 12:22:33.867  INFO 11400 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-04 12:22:34.697  INFO 11400 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-01-04 12:22:34.699  INFO 11400 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'druidDataSource' has been autodetected for JMX exposure
+2018-01-04 12:22:34.704  INFO 11400 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'druidDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=druidDataSource,type=DruidDataSource]
+2018-01-04 12:22:34.789  INFO 11400 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8089 (http)
+2018-01-04 12:22:34.805  INFO 11400 --- [main] com.myblog.Application                   : Started Application in 7.803 seconds (JVM running for 8.156)
+2018-01-04 12:22:37.743  INFO 11400 --- [http-nio-8089-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1514448414; _ga=GA1.1.35197324.1514448414; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%227079281%22%2C%22%24device_id%22%3A%221609c28e795a2b-0f37c80dfe6b17-5b44271d-2073600-1609c28e7968bb%22%2C%22first_id%22%3A%221609c28e795a2b-0f37c80dfe6b17-5b44271d-2073600-1609c28e7968bb%22%7D] that contained an invalid cookie. That cookie will be ignored.Note: further occurrences of this error will be logged at DEBUG level.
+2018-01-04 12:22:37.754  INFO 11400 --- [http-nio-8089-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/admin]  : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-01-04 12:22:37.755  INFO 11400 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-01-04 12:22:37.789  INFO 11400 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 34 ms
+2018-01-04 12:22:38.518  INFO 11400 --- [http-nio-8089-exec-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited

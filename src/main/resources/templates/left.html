@@ -27,7 +27,7 @@
                 </ul>
             </li>
             <li>
-                <a href="">
+                <a th:href="@{/article}">
                     <i class="fa fa-cog"></i>
                     <span>帖子管理</span>
                 </a>
@@ -68,10 +68,16 @@
                     <span>广告管理</span>
                 </a> 
             </li>
-              <li>
+            <li>
                 <a href="">
                     <i class="fa fa-cog"></i>
                     <span>其他管理</span>
+                </a> 
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa fa-cog"></i>
+                    <span>统计</span>
                 </a> 
             </li>
             <li class="">
@@ -87,7 +93,7 @@
                         <a href=""><i class="fa fa-circle-o"></i>在线人数</a>
                     </li>
                     <li>
-                        <a href=""><i class="fa fa-circle-o"></i>日志访问</a>
+                        <a th:href="@{/log}"><i class="fa fa-circle-o"></i>日志访问</a>
                     </li>
                 </ul>
             </li>

@@ -7,32 +7,31 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.myblog.domain.User;
+import com.myblog.domain.LogDO;
 import com.myblog.log.annotation.Log;
-import com.myblog.service.UserService;
+import com.myblog.service.ILogService;
 import com.myblog.ulits.PageList;
 import com.myblog.ulits.PageParam;
 
 @Controller
-public class UserController {
+public class LogController {
 	
 	@Autowired
-	public UserService userService;
+	public ILogService iLogService;
  
-	@RequestMapping(value="/user", method=RequestMethod.GET)
+	@RequestMapping(value="/log", method=RequestMethod.GET)
     public String index(Model model) {
-        return "user/user-list";
+        return "monitor/monitor-log";
     }
-	
-    @RequestMapping(value="/listUser", method=RequestMethod.GET)
-    @Log("查询用户信息")
-	public @ResponseBody PageList<User> listUser(Integer start,Integer limit,String query){
+
+	@RequestMapping(value="/listLog", method=RequestMethod.GET)
+    @Log("日志查询列表")
+	public @ResponseBody PageList<LogDO> listUser(Integer start,Integer limit){
 		PageParam page = new PageParam(start, limit);
-		int count = userService.countListUser(query);
-		PageList<User> result = new PageList<>(count, limit);
+		int count = iLogService.countLog();
+		PageList<LogDO> result = new PageList<>(count, limit);
 		if(count>page.getStart())
-			result.setList(userService.listUser(page.getStart(), page.getLimit(),query));
+			result.setList(iLogService.listLog(page.getStart(), page.getLimit()));
 		return result;
     }
-    
 }
