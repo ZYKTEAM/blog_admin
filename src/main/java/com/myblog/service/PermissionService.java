@@ -86,4 +86,8 @@ public class PermissionService {
 			permissionMapper.updateMenu(menu);
 		}
 	}
+
+	public void deleteMenu(Long id) {
+		permissionMapper.deleteMenu(id);
+	}
 }

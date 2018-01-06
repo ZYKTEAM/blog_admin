@@ -126,7 +126,8 @@ public class PermissionController {
      * 保存菜单
      */
     @RequestMapping(value = "/permissions/saveMenu", method = RequestMethod.POST)
-    public @ResponseBody HttpResults saveMenu(Permission menu) {
+    public @ResponseBody
+    HttpResults saveMenu(Permission menu) {
         HttpResults results = new HttpResults();
         try {
             if (menu == null || menu.getPid() == null || menu.getUrl() == null) {
@@ -139,6 +140,30 @@ public class PermissionController {
             e.printStackTrace();
             results.setStatus("203");
             results.setMessage("参数错误");
+            return results;
+        }
+        results.setMessage("操作成功");
+        return results;
+    }
+
+    /**
+     * 删除菜单
+     */
+    @RequestMapping(value = "/permissions/deleteMenu", method = RequestMethod.GET)
+    public @ResponseBody
+    HttpResults deleteMenu(Long id) {
+        HttpResults results = new HttpResults();
+        try {
+            if (id == null) {
+                results.setStatus("203");
+                results.setMessage("参数错误");
+                return results;
+            }
+            permissionService.deleteMenu(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+            results.setStatus("203");
+            results.setMessage("操作失败");
             return results;
         }
         results.setMessage("操作成功");

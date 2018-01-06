@@ -94,4 +94,9 @@
         where id = #{id}
     </insert>
 
+    <delete id="deleteMenu" parameterType="java.lang.Long">
+        UPDATE permission_t SET is_deleted=#{isDeleted}
+        where id = #{id}
+    </delete>
+
 </mapper>

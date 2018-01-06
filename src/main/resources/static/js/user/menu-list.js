@@ -88,6 +88,20 @@ $(function () {
             $(".pagination").hide();
         }
     };
+    /**
+     *删除菜单 逻辑删除
+     */
+    $("#menuList").on("click", ".to-delete", function () {
+        var id = this.getAttribute("roleid");
+        $.ajax({
+            url: permissions_delete,
+            data: "id=" + id,
+            dataType: "json",
+            success: function (result) {
+                resultMsg(result);
+            }
+        })
+    });
 
     /* 菜单修改*/
     $("#menuList").on("click", ".to-user", function () {
@@ -519,7 +533,17 @@ $("#insertMenu_id").on("click", function () {
     // $('#treeview2').jstree("select_node", "");
 });
 
+function resultMsg(data) {
+    if (data.status == 10000) {
+        alertLayerMessage("操作成功");
+        location.reload();
+    } else if (data.message) {
+        alertLayerMessage(data.message);
+    }
+}
+
 var saveMenuUrl = "/admin/permissions/saveMenu";
 var menuData = "/admin/permissions/data";
 var getMenuData = "";
 var permissions_query = "/admin/permissions/query";
+var permissions_delete = "/admin/permissions/deleteMenu";

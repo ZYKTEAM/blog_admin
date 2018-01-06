@@ -22,4 +22,6 @@ public interface PermissionMapper {
     void saveMenu(Permission menu);
 
 	void updateMenu(Permission menu);
+
+	void deleteMenu(Long id);
 }
