@@ -65,4 +65,25 @@ public class PermissionService {
 		return perms;
 	}
 
+	public int countListPermisson(String query) {
+		return permissionMapper.countListPermission(query);
+	}
+
+	public List<Permission> findList(Integer start, Integer limit, String query) {
+		return permissionMapper.findPermissionList(start,limit,query);
+	}
+
+	public Permission getMenuById(Long id) {
+		return permissionMapper.getMenuById(id);
+	}
+
+	public void saveMenu(Permission menu) {
+		if(menu.getId()==null){
+			menu.setIsDeleted(0);
+			menu.setLeaf(0);
+			permissionMapper.saveMenu(menu);
+		}else {
+			permissionMapper.updateMenu(menu);
+		}
+	}
 }

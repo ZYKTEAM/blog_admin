@@ -13,4 +13,13 @@ public interface PermissionMapper {
 
 	List<Permission> findPermissionsPathAndLeaf(@Param("path")String path, @Param("leaf")Integer leaf);
 
+	int countListPermission(@Param("query") String query);
+
+	List<Permission> findPermissionList(@Param("start")Integer start,@Param("limit") Integer limit,@Param("query") String query);
+
+	Permission getMenuById(Long id);
+
+    void saveMenu(Permission menu);
+
+	void updateMenu(Permission menu);
 }

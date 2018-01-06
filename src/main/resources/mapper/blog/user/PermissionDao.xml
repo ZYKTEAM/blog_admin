@@ -2,32 +2,96 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.myblog.mapper.PermissionMapper">
 
-	<sql id="PermissionSQL">
+    <sql id="PermissionSQL">
 		id, code, title, url, `type`, pid, leaf, path, sort,
 		is_deleted isDeleted
 	</sql>
-	
-	 <select id="findPermissionsByPId" resultType="Permission">
-		SELECT 
-			<include refid="PermissionSQL" />
-		FROM permission_t
-		WHERE 
-			is_deleted = 0
-			AND pid = #{pid} 
-	</select>
-	
-	<select id="findPermissionsPathAndLeaf" resultType="Permission">
-		SELECT 
-			<include refid="PermissionSQL" />
-		FROM permission_t
-		WHERE 
-			is_deleted = 0
-			<if test="leaf!=null">
-				AND leaf = #{leaf} 
-			</if>
-			<if test="path!=null and path!=''">
-				AND path LIKE #{path}
-			</if>
-	</select>	
-	
+
+    <select id="findPermissionsByPId" resultType="Permission">
+        SELECT
+        <include refid="PermissionSQL"/>
+        FROM permission_t
+        WHERE
+        is_deleted = 0
+        AND pid = #{pid}
+    </select>
+
+    <select id="findPermissionsPathAndLeaf" resultType="Permission">
+        SELECT
+        <include refid="PermissionSQL"/>
+        FROM permission_t
+        WHERE
+        is_deleted = 0
+        <if test="leaf!=null">
+            AND leaf = #{leaf}
+        </if>
+        <if test="path!=null and path!=''">
+            AND path LIKE #{path}
+        </if>
+    </select>
+
+    <select id="countListPermission" resultType="java.lang.Integer">
+        SELECT count(1) FROM permission_t
+        WHERE is_deleted = 0
+        <if test="query!=null and query!=''">
+            AND title LIKE concat("%",#{query},"%")
+        </if>
+    </select>
+
+    <!--查询全部菜单列表-->
+    <select id="findPermissionList" resultType="com.myblog.domain.Permission">
+        SELECT
+        <include refid="PermissionSQL"/>
+        FROM permission_t
+        WHERE
+        is_deleted = 0
+        <if test="query!=null and query!=''">
+            AND title LIKE concat("%",#{query},"%")
+        </if>
+        limit #{start},#{limit}
+    </select>
+
+    <!--根据ID查询菜单表-->
+    <select id="getMenuById" resultType="com.myblog.domain.Permission">
+        SELECT
+        <include refid="PermissionSQL"/>
+        FROM permission_t
+        WHERE
+        is_deleted = 0 AND id=#{id}
+    </select>
+
+    <insert id="saveMenu" parameterType="com.myblog.domain.Permission">
+        INSERT INTO permission_t(code,title,url,type,pid,leaf,path,sort,is_deleted)
+         VALUES (#{code},#{title},#{url},#{type},#{pid},#{leaf},#{path},#{sort},#{isDeleted})
+    </insert>
+
+    <insert id="updateMenu" parameterType="com.myblog.domain.Permission">
+        UPDATE permission_t SET is_deleted=#{isDeleted}
+        <if test="code!=null and code !=''">
+            ,code=#{code}
+        </if>
+        <if test="title!=null and title!=''">
+            ,title=#{title}
+        </if>
+        <if test="url!=null and url!=''">
+            ,url=#{url}
+        </if>
+        <if test="type!=null and type!=''">
+            ,type=#{type}
+        </if>
+        <if test="pid!=null and pid!=''">
+            ,pid=#{pid}
+        </if>
+        <if test="leaf!=null and leaf!=''">
+            ,leaf=#{leaf}
+        </if>
+        <if test="path!=null and path!=''">
+            ,path=#{path}
+        </if>
+        <if test="sort!=null and sort!=''">
+            ,sort=#{sort}
+        </if>
+        where id = #{id}
+    </insert>
+
 </mapper>

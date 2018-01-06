@@ -74,14 +74,15 @@ public class Permission implements GrantedAuthority {
 	public void setSort(Integer sort) {
 		this.sort = sort;
 	}
+
 	public Integer getIsDeleted() {
 		return isDeleted;
 	}
+
 	public void setIsDeleted(Integer isDeleted) {
 		this.isDeleted = isDeleted;
 	}
-	
-	
+
 	@Override
 	public String getAuthority() {
 		return null;
