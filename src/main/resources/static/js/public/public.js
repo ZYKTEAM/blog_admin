@@ -25,8 +25,6 @@ $(function () {
         layer.confirm("确认退出？", {title: "退出系统"}, function(){window.location.href = "/admin/logout";});
     });
 
-//    $("#panelitem").attr("href","http://qingdao.gclasscn.com/panel");
-
 });
 
 //计算导航选中

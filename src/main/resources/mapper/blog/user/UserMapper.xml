@@ -52,5 +52,14 @@
 	<select id="getUserByUserId" resultType="User">
 		select <include refid="userSql" /> from t_blog_user u where id = #{userId}
 	</select>
+	
+	<insert id="userAdd">
+		INSERT INTO t_blog_user
+			(open_id, gender, login_name, phone, email, password, create_time, avakname, avatar, 
+			 birthday, meta, md5, login_type, introduce, addr, qq)
+		VALUES 
+		    (#{openId}, #{gender},#{loginName},#{phone}, #{email},#{password}, NOW(), #{avakName}, #{avatar}, 
+		    #{birthday}, #{meta}, #{md5}, #{loginType}, #{introduce}, #{addr}, #{qq})
+	</insert>
       
 </mapper>

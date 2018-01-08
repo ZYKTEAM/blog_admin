@@ -41,8 +41,6 @@ public class User {
     private String addr;
     //QQ
     private String qq;
-    
-    
 
     public String getLoginName() {
 		return loginName;

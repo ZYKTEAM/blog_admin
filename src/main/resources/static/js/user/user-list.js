@@ -1,148 +1,148 @@
-$(function () {
+	$(function () {
+		
+	var current=1;
+	var limit = 10;
 	
-var current=1;
-var limit = 10;
-
-//初始化加载权限模态框
-initPermissionsTree();
-
-var params={'start':0,'limit':limit,'query':null};
-userList();
-
-/* 搜索框条件查询 回车*/
-$("#query").keydown(function(event) {  
-	if(event.keyCode == 13){
-		event.preventDefault();
-		current=1;
-		userList();
-    }
-});
- 
-/* 搜索框条件查询 点击按钮*/
-$("#but_query").click(function(){
-		current=1;
-		userList();
-});
-
-/* 参数*/
-function paramsing(){
-	var query = $("#query").val();
-	params['start']=current-1;
-	params['limit']=limit;
-	params['query']=query
-}
-    
-/**
- *  用户列表信息
- */
-function userList(){
-	var loginName = $("#loginName").val();//用于判断是否为admin
-	paramsing();
-	$("#userList").empty();
-	$.ajax({
-		type:"get",
-		url:"/admin/listUser",
-		data:params,
-		success : function(data){
-			$("#userTempl").tmpl(data).appendTo("#userList");
-			if(loginName == "admin"){
-				$(".to-permission").show();
-			}else{
-				$(".to-permission").hide();
+	//初始化加载权限模态框
+	initPermissionsTree();
+	
+	var params={'start':0,'limit':limit,'query':null};
+	userList();
+	
+	/* 搜索框条件查询 回车*/
+	$("#query").keydown(function(event) {  
+		if(event.keyCode == 13){
+			event.preventDefault();
+			current=1;
+			userList();
+	    }
+	});
+	 
+	/* 搜索框条件查询 点击按钮*/
+	$("#but_query").click(function(){
+			current=1;
+			userList();
+	});
+	
+	/* 参数*/
+	function paramsing(){
+		var query = $("#query").val();
+		params['start']=current-1;
+		params['limit']=limit;
+		params['query']=query
+	}
+	    
+	/**
+	 *  用户列表信息
+	 */
+	function userList(){
+		var loginName = $("#loginName").val();//用于判断是否为admin
+		paramsing();
+		$("#userList").empty();
+		$.ajax({
+			type:"get",
+			url:"/admin/listUser",
+			data:params,
+			success : function(data){
+				$("#userTempl").tmpl(data).appendTo("#userList");
+				if(loginName == "admin"){
+					$(".to-permission").show();
+				}else{
+					$(".to-permission").hide();
+				}
+				pageing(data.count);
+			},error:function(data){
+				layer.alert("出现错误信息!");
 			}
-			pageing(data.count);
-		},error:function(data){
-			layer.alert("出现错误信息!");
+		});
+	  }
+	
+	/**
+	 * 分页事件
+	 */
+	function pageing(count){
+		if(count<1) {
+			$(".pagination").empty();
+			return false;
 		}
+		var totalPage = parseInt(count/limit)+((count%limit)>0?1:0);
+		if(totalPage>1){
+			$(".pagination").show();
+	    	$(".pagination").bootstrapPaginator({
+	    		bootstrapMajorVersion: 3.0,
+	    		currentPage: current,
+	    		totalPages: totalPage,
+	    		numberOfPages: limit,
+	    		itemTexts: function (type, page, currentpage) {
+	                switch (type) {
+	    	            case "first": return "首页";
+	    	            case "prev" : return "上一页";
+	    	            case "next" : return "下一页";
+	    	            case "last" : return "尾页";
+	    	            case "page" : return page;
+	                }
+	            },onPageClicked: function(event, originalEvent, type, page){
+	    			if(current == page){
+	    				return false;
+	    			}
+	    			current = page;
+	    			userList();
+	    		}
+	    	});
+		}else{
+			$(".pagination").hide();
+		}
+	};
+	
+	
+	/**
+	 * 删除
+	 */
+	$("#userList").on("click", ".to-deleted", function() {
+		var userId = $(this).attr("userId");
+		layer.confirm('你正在删除用户信息，是否继续',function(){
+	    	$.ajax({
+	    		type:"get",
+	    		url:"/admin/delUserByUserId",
+	    		data:{
+	    			userId:userId
+	    		},
+	    		success : function(data){
+	    			userList();
+	    		},error:function(data){
+	    			layer.alert("出现错误信息!");
+	    		}
+	    	});
+	    },function(){
+	        //这里是取消的回掉函数
+	        }
+	      );
+	   });
+	    
+	/* 添加*/
+	$(".j-user-add").click(function() {
+		 window.location.href="/admin/user-add";
 	});
-  }
-
-/**
- * 分页事件
- */
-function pageing(count){
-	if(count<1) {
-		$(".pagination").empty();
-		return false;
-	}
-	var totalPage = parseInt(count/limit)+((count%limit)>0?1:0);
-	if(totalPage>1){
-		$(".pagination").show();
-    	$(".pagination").bootstrapPaginator({
-    		bootstrapMajorVersion: 3.0,
-    		currentPage: current,
-    		totalPages: totalPage,
-    		numberOfPages: limit,
-    		itemTexts: function (type, page, currentpage) {
-                switch (type) {
-    	            case "first": return "首页";
-    	            case "prev" : return "上一页";
-    	            case "next" : return "下一页";
-    	            case "last" : return "尾页";
-    	            case "page" : return page;
-                }
-            },onPageClicked: function(event, originalEvent, type, page){
-    			if(current == page){
-    				return false;
-    			}
-    			current = page;
-    			userList();
-    		}
-    	});
-	}else{
-		$(".pagination").hide();
-	}
-};
-
-
-/**
- * 删除
- */
-$("#userList").on("click", ".to-deleted", function() {
-	var userId = $(this).attr("userId");
-	layer.confirm('你正在删除用户信息，是否继续',function(){
-    	$.ajax({
-    		type:"get",
-    		url:"/admin/delUserByUserId",
-    		data:{
-    			userId:userId
-    		},
-    		success : function(data){
-    			userList();
-    		},error:function(data){
-    			layer.alert("出现错误信息!");
-    		}
-    	});
-    },function(){
-        //这里是取消的回掉函数
-        }
-      );
-   });
-    
-/* 修改*/
-/*$("#userList").on("click", ".to-edit", function() {
-	 window.location.href="/admin/user-edit?userId="+$(this).attr("userId");
-});*/
-
-/**
- *  权限 模态框
- */
-$("#userList").on("click",".to-permission",function(){
-	var userId_ = $(this).attr("userId");
-	$("#user-id").val(userId_);
-	$('#Modal-perms-set').find('.modal-title').text('用户权限设置');
-    $('#Modal-perms-set').modal('show');
-    defaultPermissionTree({'type':2,'refId':userId_});
-});
-
-/* 确定*/
-$("#do-save").on("click",function(){
-	saveing(function(data){ 
-		$('#Modal-perms-set').modal('hide');
-		alertLayerMessage("保存成功！");
+	
+	/**
+	 *  权限 模态框
+	 */
+	$("#userList").on("click",".to-permission",function(){
+		var userId_ = $(this).attr("userId");
+		$("#user-id").val(userId_);
+		$('#Modal-perms-set').find('.modal-title').text('用户权限设置');
+	    $('#Modal-perms-set').modal('show');
+	    defaultPermissionTree({'type':2,'refId':userId_});
 	});
-});
-
+	
+	/* 确定*/
+	$("#do-save").on("click",function(){
+		saveing(function(data){ 
+			$('#Modal-perms-set').modal('hide');
+			alertLayerMessage("保存成功！");
+		});
+	});
+	
 });
 
 var SAVEING_URL='/admin/rolePermissions',FINDING_URL='/admin/rolePermissions/refid';
