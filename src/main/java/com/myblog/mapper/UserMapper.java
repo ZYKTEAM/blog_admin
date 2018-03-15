@@ -18,4 +18,6 @@ public interface UserMapper {
 	
 	public Integer countListUser(@Param("query")String query);
 	
+	public Integer userAdd(User user);
+	
 }

@@ -28,5 +28,8 @@ public class UserService {
         return userMapper.countListUser(query);
     }
 	
+    public Integer userAdd(User user) {
+        return userMapper.userAdd(user);
+    }
 	
 }

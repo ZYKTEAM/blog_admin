@@ -6,10 +6,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+
 /*import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;*/
 import com.myblog.ulits.PageList;
 import com.myblog.ulits.PageParam;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +23,7 @@ import com.google.common.collect.Lists;
 import com.myblog.domain.Permission;
 import com.myblog.domain.RolePermission;
 import com.myblog.domain.TreeNode;
+import com.myblog.log.annotation.Log;
 import com.myblog.service.PermissionService;
 import com.myblog.service.RolePermissionService;
 import com.myblog.ulits.HttpResults;
@@ -112,8 +115,8 @@ public class PermissionController {
      * @return
      */
     @RequestMapping(value = "/permissions/data", method = RequestMethod.GET)
-    public @ResponseBody
-    PageList<Permission> menuData(Integer start, Integer limit, String query) {
+    @Log("菜单列表")
+    public @ResponseBody PageList<Permission> menuData(Integer start, Integer limit, String query) {
         PageParam page = new PageParam(start, limit);
         int count = permissionService.countListPermisson(query);
         PageList<Permission> result = new PageList<>(count, limit);
@@ -126,8 +129,8 @@ public class PermissionController {
      * 保存菜单
      */
     @RequestMapping(value = "/permissions/saveMenu", method = RequestMethod.POST)
-    public @ResponseBody
-    HttpResults saveMenu(Permission menu) {
+    @Log("添加菜单")
+    public @ResponseBody HttpResults saveMenu(Permission menu) {
         HttpResults results = new HttpResults();
         try {
             if (menu == null || menu.getPid() == null || menu.getUrl() == null) {
@@ -150,8 +153,8 @@ public class PermissionController {
      * 删除菜单
      */
     @RequestMapping(value = "/permissions/deleteMenu", method = RequestMethod.GET)
-    public @ResponseBody
-    HttpResults deleteMenu(Long id) {
+    @Log("删除菜单")
+    public @ResponseBody  HttpResults deleteMenu(Long id) {
         HttpResults results = new HttpResults();
         try {
             if (id == null) {

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.myblog.domain.Role;
 import com.myblog.domain.UserRole;
+import com.myblog.log.annotation.Log;
 import com.myblog.service.RoleService;
 import com.myblog.service.UserRoleService;
 import com.myblog.ulits.HttpResults;
@@ -36,6 +37,7 @@ public class RoleController {
     }
 	
 	@RequestMapping(value="/roles", method=RequestMethod.GET)
+	@Log("角色查询")
 	public @ResponseBody PageList<Role> roles(Integer start,Integer limit,String query){
 		PageParam page = new PageParam(start, limit);
 		Integer count = roleService.countRoles(query);
@@ -69,6 +71,7 @@ public class RoleController {
     }
 	
 	@RequestMapping(value = "/roleUser", method = RequestMethod.POST)
+	@Log("用户属于哪些角色")
 	public @ResponseBody Integer roleUser(@RequestParam(value = "userIds[]", required = false) Long[] userIds,
 			@RequestParam(value = "delteaIds[]", required = false) Long[] delteaIds, Long roleId) {
 		int count = 1;
